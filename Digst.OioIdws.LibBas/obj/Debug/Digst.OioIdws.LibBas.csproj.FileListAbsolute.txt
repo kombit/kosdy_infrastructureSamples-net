@@ -1,0 +1,54 @@
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\src\examples\KOSDY-samples.net\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\z6fel\Desktop\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Kombit.InfrastructureSamples-net (SENESTE)\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\z6fel\Desktop\InfrastructureSamples-ORG6\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.LibBas.pdb
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.dll
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Debug\Digst.OioIdws.Common.pdb
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.dll
+C:\Users\xcwl\source\repos\Version 2 til digkat\Kombit.InfrastructureSamples-net-2_0\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Debug\Digst.OioIdws.LibBas.pdb

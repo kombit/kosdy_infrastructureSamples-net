@@ -1,0 +1,9 @@
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Release\Digst.OioIdws.LibBas.dll
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Release\Digst.OioIdws.LibBas.pdb
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Release\Digst.OioIdws.Common.dll
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\bin\Release\Digst.OioIdws.Common.pdb
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Release\Digst.OioIdws.LibBas.csprojAssemblyReference.cache
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Release\Digst.OioIdws.LibBas.csproj.CoreCompileInputs.cache
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Release\Digst.OioIdws.LibBas.csproj.CopyComplete
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Release\Digst.OioIdws.LibBas.dll
+C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.LibBas\obj\Release\Digst.OioIdws.LibBas.pdb
