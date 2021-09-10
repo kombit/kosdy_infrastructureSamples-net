@@ -40,7 +40,7 @@ namespace Kombit.InfrastructureSamples {
         // The alias and thumbprint for the certificate to trust the STS.
         // Change only needed if you don't use the external test server for tokens.
         public const string StsCertificateAlias = "test-ekstern-adgangsstyring (funktionscertifikat)";
-        public const string StsCertificateThumbprint = "8108491037f77a8f9f9038a0ffed9d2a580b8491";
+        public const string StsCertificateThumbprint = "7002cf221d1d3979eca623599e43e0b6b4c8920c";
         
         public const StoreLocation StsCertificateStoreLocation = StoreLocation.CurrentUser;
         public const StoreName StsCertificateStoreName = StoreName.My;

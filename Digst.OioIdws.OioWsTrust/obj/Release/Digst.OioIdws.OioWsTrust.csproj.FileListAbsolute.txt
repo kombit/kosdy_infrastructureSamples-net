@@ -1,9 +1,0 @@
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\bin\Release\Digst.OioIdws.OioWsTrust.dll
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\bin\Release\Digst.OioIdws.OioWsTrust.pdb
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\bin\Release\Digst.OioIdws.Common.dll
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\bin\Release\Digst.OioIdws.Common.pdb
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\obj\Release\Digst.OioIdws.OioWsTrust.csprojAssemblyReference.cache
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\obj\Release\Digst.OioIdws.OioWsTrust.csproj.CoreCompileInputs.cache
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\obj\Release\Digst.OioIdws.OioWsTrust.csproj.CopyComplete
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\obj\Release\Digst.OioIdws.OioWsTrust.dll
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.OioWsTrust\obj\Release\Digst.OioIdws.OioWsTrust.pdb

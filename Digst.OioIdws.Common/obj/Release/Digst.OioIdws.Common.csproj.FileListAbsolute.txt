@@ -1,5 +1,0 @@
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.Common\bin\Release\Digst.OioIdws.Common.dll
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.Common\bin\Release\Digst.OioIdws.Common.pdb
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.Common\obj\Release\Digst.OioIdws.Common.csproj.CoreCompileInputs.cache
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.Common\obj\Release\Digst.OioIdws.Common.dll
-C:\projects\examples\Kombit.InfrastructureSamples-net_final\Kombit.InfrastructureSamples\Digst.OioIdws.Common\obj\Release\Digst.OioIdws.Common.pdb
