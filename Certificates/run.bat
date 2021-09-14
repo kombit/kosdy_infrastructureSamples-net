@@ -5,6 +5,7 @@ echo Installing certificates for Secure Token Service
 
 certutil -addstore -user -f Root "Secure Token Service\TRUST2408 OCES Primary CA.cer"
 certutil -addstore -user -f Root "Secure Token Service\TRUST2408 OCES CA III.cer"
+certutil -addstore -user -f Root "Secure Token Service\TRUST2408 OCES CA IV.cer"
 certutil -addstore -user -f My "Secure Token Service\test-ekstern-adgangsstyring (funktionscertifikat).cer"
 
 echo Installing certificates for Serviceplatformen
