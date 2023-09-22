@@ -280,7 +280,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ListOutputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ListOutputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class ListOutputType1 : ListOutputType
     {
         
@@ -306,30 +306,46 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class FiltreretOejebliksbilledeType
     {
         
-        private SagDokObjektType objektTypeField;
+        private SagDokObjektType objektIDField;
+        
+        private DataEjer dataEjerField;
         
         private RegistreringType1[] registreringField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public SagDokObjektType ObjektType
+        public SagDokObjektType ObjektID
         {
             get
             {
-                return this.objektTypeField;
+                return this.objektIDField;
             }
             set
             {
-                this.objektTypeField = value;
+                this.objektIDField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Registrering", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public DataEjer DataEjer
+        {
+            get
+            {
+                return this.dataEjerField;
+            }
+            set
+            {
+                this.dataEjerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Registrering", Order=2)]
         public RegistreringType1[] Registrering
         {
             get
@@ -376,7 +392,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class KlasseType : SagDokObjektType
     {
         
@@ -402,7 +418,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class RegistreringType1 : RegistreringType
     {
         
@@ -462,7 +478,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class EgenskabType
     {
         
@@ -479,6 +495,8 @@ namespace Kombit.InfrastructureSamples.KlasseService
         private string titelTekstField;
         
         private string retskildeTekstField;
+        
+        private string sorteringField;
         
         private string aendringsnotatTekstField;
         
@@ -584,6 +602,20 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=7)]
+        public string Sortering
+        {
+            get
+            {
+                return this.sorteringField;
+            }
+            set
+            {
+                this.sorteringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=8)]
         public string AendringsnotatTekst
         {
             get
@@ -597,7 +629,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Soegeord", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("Soegeord", Order=9)]
         public SoegeordType[] Soegeord
         {
             get
@@ -861,7 +893,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class SoegeordType
     {
         
@@ -919,7 +951,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class PubliceretStatusType
     {
         
@@ -977,7 +1009,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class RelationListeType
     {
         
@@ -985,21 +1017,13 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         private AktoerRelationType ejerField;
         
-        private KlasseFlerRelationType[] erstatterField;
-        
         private FacetRelationType facetField;
         
-        private KlasseFlerRelationType[] lovligeKombinationerField;
-        
-        private KlasseFlerRelationType[] mapningerField;
+        private MapningerFlerRelationType[] mapningerField;
         
         private KlasseRelationType overordnetKlasseField;
         
         private AktoerFlerRelationType[] redaktoererField;
-        
-        private KlasseFlerRelationType[] sideordnedeField;
-        
-        private KlasseFlerRelationType[] tilfoejelserField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=0)]
@@ -1030,21 +1054,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Erstatter", Namespace="urn:oio:sagdok:3.0.0", Order=2)]
-        public KlasseFlerRelationType[] Erstatter
-        {
-            get
-            {
-                return this.erstatterField;
-            }
-            set
-            {
-                this.erstatterField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=2)]
         public FacetRelationType Facet
         {
             get
@@ -1058,22 +1068,8 @@ namespace Kombit.InfrastructureSamples.KlasseService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LovligeKombinationer", Namespace="urn:oio:sagdok:3.0.0", Order=4)]
-        public KlasseFlerRelationType[] LovligeKombinationer
-        {
-            get
-            {
-                return this.lovligeKombinationerField;
-            }
-            set
-            {
-                this.lovligeKombinationerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Mapninger", Namespace="urn:oio:sagdok:3.0.0", Order=5)]
-        public KlasseFlerRelationType[] Mapninger
+        [System.Xml.Serialization.XmlElementAttribute("Mapninger", Namespace="urn:oio:sagdok:3.0.0", Order=3)]
+        public MapningerFlerRelationType[] Mapninger
         {
             get
             {
@@ -1086,7 +1082,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", Order=4)]
         public KlasseRelationType OverordnetKlasse
         {
             get
@@ -1100,7 +1096,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Redaktoerer", Namespace="urn:oio:sagdok:3.0.0", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("Redaktoerer", Namespace="urn:oio:sagdok:3.0.0", Order=5)]
         public AktoerFlerRelationType[] Redaktoerer
         {
             get
@@ -1110,34 +1106,6 @@ namespace Kombit.InfrastructureSamples.KlasseService
             set
             {
                 this.redaktoererField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sideordnede", Namespace="urn:oio:sagdok:3.0.0", Order=8)]
-        public KlasseFlerRelationType[] Sideordnede
-        {
-            get
-            {
-                return this.sideordnedeField;
-            }
-            set
-            {
-                this.sideordnedeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Tilfoejelser", Namespace="urn:oio:sagdok:3.0.0", Order=9)]
-        public KlasseFlerRelationType[] Tilfoejelser
-        {
-            get
-            {
-                return this.tilfoejelserField;
-            }
-            set
-            {
-                this.tilfoejelserField = value;
             }
         }
     }
@@ -1174,7 +1142,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         private VirkningType virkningField;
         
-        private UnikIdType referenceIDField;
+        private UuidLabelInputType referenceIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -1192,7 +1160,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public UnikIdType ReferenceID
+        public UuidLabelInputType ReferenceID
         {
             get
             {
@@ -1311,11 +1279,140 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
-    public partial class KlasseFlerRelationType : FlerRelationType
+    public partial class MapningerFlerRelationType : DynamicRoleFlerRelationType
     {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MapningerFlerRelationType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class DynamicRoleFlerRelationType : FlerRelationType
+    {
+        
+        private UuidLabelNoUrnInputType rolleField;
+        
+        private UuidLabelNoUrnInputType typeField;
+        
+        private IndeksInputType indeksField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public UuidLabelNoUrnInputType Rolle
+        {
+            get
+            {
+                return this.rolleField;
+            }
+            set
+            {
+                this.rolleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UuidLabelNoUrnInputType Type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public IndeksInputType Indeks
+        {
+            get
+            {
+                return this.indeksField;
+            }
+            set
+            {
+                this.indeksField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class UuidLabelNoUrnInputType
+    {
+        
+        private string uUIDIdentifikatorField;
+        
+        private string labelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string UUIDIdentifikator
+        {
+            get
+            {
+                return this.uUIDIdentifikatorField;
+            }
+            set
+            {
+                this.uUIDIdentifikatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Label
+        {
+            get
+            {
+                return this.labelField;
+            }
+            set
+            {
+                this.labelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class IndeksInputType
+    {
+        
+        private string uUIDIdentifikatorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string UUIDIdentifikator
+        {
+            get
+            {
+                return this.uUIDIdentifikatorField;
+            }
+            set
+            {
+                this.uUIDIdentifikatorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicRoleFlerRelationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MapningerFlerRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicFlerRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AdresseFlerRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpgaverFlerRelationType))]
@@ -1342,7 +1439,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         private VirkningType virkningField;
         
-        private UnikIdType referenceIDField;
+        private UuidLabelInputType referenceIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -1360,7 +1457,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public UnikIdType ReferenceID
+        public UuidLabelInputType ReferenceID
         {
             get
             {
@@ -1569,6 +1666,16 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class KlasseFlerRelationType : FlerRelationType
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
     public partial class PersonFlerRelationType : FlerRelationType
     {
     }
@@ -1708,6 +1815,32 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
     public partial class LaesFiltreretOutputType : SagDokObjektType
     {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class DataEjer
+    {
+        
+        private string cVRField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string CVR
+        {
+            get
+            {
+                return this.cVRField;
+            }
+            set
+            {
+                this.cVRField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -2057,6 +2190,8 @@ namespace Kombit.InfrastructureSamples.KlasseService
         
         private SoegVirkningType soegVirkningField;
         
+        private DataEjer dataEjerField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
         public string FoersteResultatReference
@@ -2112,6 +2247,20 @@ namespace Kombit.InfrastructureSamples.KlasseService
                 this.soegVirkningField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public DataEjer DataEjer
+        {
+            get
+            {
+                return this.dataEjerField;
+            }
+            set
+            {
+                this.dataEjerField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -2119,7 +2268,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class SoegInputType1 : SoegInputType
     {
         
@@ -2222,7 +2371,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class RetInputType1 : RetInputType
     {
         
@@ -2414,7 +2563,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class ImportInputType
     {
         
@@ -2494,7 +2643,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class LaesOutputType : BasicOutputType
     {
         
@@ -2547,7 +2696,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OpretInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OpretInputType", Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/")]
     public partial class OpretInputType1 : OpretInputType
     {
         
@@ -2612,7 +2761,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.OpretInputType1 OpretInput;
         
         public opretRequest()
@@ -2636,7 +2785,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.OpretOutputType OpretOutput;
         
         public opretResponse()
@@ -2660,7 +2809,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.ImportInputType ImportInput;
         
         public importerRequest()
@@ -2684,7 +2833,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.BasicOutputType ImportOutput;
         
         public importerResponse()
@@ -2708,7 +2857,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.UuidNoteInputType PassiverInput;
         
         public passiverRequest()
@@ -2732,7 +2881,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.BasicOutputType PassiverOutput;
         
         public passiverResponse()
@@ -2756,7 +2905,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.LaesInputType LaesInput;
         
         public laesRequest()
@@ -2780,7 +2929,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.LaesOutputType LaesOutput;
         
         public laesResponse()
@@ -2804,7 +2953,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.RetInputType1 RetInput;
         
         public retRequest()
@@ -2828,7 +2977,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.BasicOutputType RetOutput;
         
         public retResponse()
@@ -2852,7 +3001,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.UuidNoteInputType SletInput;
         
         public sletRequest()
@@ -2876,7 +3025,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.BasicOutputType SletOutput;
         
         public sletResponse()
@@ -2900,7 +3049,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.SoegInputType1 SoegInput;
         
         public soegRequest()
@@ -2924,7 +3073,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.SoegOutputType SoegOutput;
         
         public soegResponse()
@@ -2948,7 +3097,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.ListInputType ListInput;
         
         public listRequest()
@@ -2972,7 +3121,7 @@ namespace Kombit.InfrastructureSamples.KlasseService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.KlasseService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/6/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://stoettesystemerne.dk/klassifikation/klasse/7/", Order=0)]
         public Kombit.InfrastructureSamples.KlasseService.ListOutputType1 ListOutput;
         
         public listResponse()

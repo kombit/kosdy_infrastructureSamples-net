@@ -72,10 +72,10 @@
     <Compile Include="Organisation\OrganisationService.cs" />
     <Compile Include="Organisation\Virksomhed.cs" />
     <Compile Include="Organisation\VirksomhedService.cs" />
-    <Compile Include="SagDokumentIndeks\SagDokumentIndeksService.LokalUdvidelseListeType.cs" />
-    <Compile Include="SagDokumentIndeks\SagDokumentIndeks.cs" />
     <Compile Include="SagDokumentIndeks\SagDokumentIndeksService.cs" />
     <Compile Include="SagDokumentIndeks\SagDokumentIndeksService.LokalUdvidelse.cs" />
+    <Compile Include="SagDokumentIndeks\SagDokumentIndeksService.LokalUdvidelseListeType.cs" />
+    <Compile Include="SagDokumentIndeks\SagDokumentIndeks.cs" />
     <Compile Include="Token\CacheHelper.cs" />
     <Compile Include="Token\CertificateLoader.cs" />
     <Compile Include="Program.cs" />

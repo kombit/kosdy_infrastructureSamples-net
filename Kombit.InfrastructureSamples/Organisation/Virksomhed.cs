@@ -10,7 +10,7 @@ namespace Kombit.InfrastructureSamples.Virksomhed
     /// <summary>
     /// Class for handling requests to VirksomhedService
     /// </summary>
-    internal class Virksomhed {
+    public class Virksomhed {
 
         private SecurityToken token;
         private VirksomhedPortType port;
@@ -20,7 +20,7 @@ namespace Kombit.InfrastructureSamples.Virksomhed
         /// </summary>
         /// <param name="authorityCvr">CVR number to search for</param>
         /// <returns>UUID for the Virksomhed object</returns>
-        internal string GetVirksomhedUuid(string authorityCvr)
+        public string GetVirksomhedUuid(string authorityCvr)
         { 
             var soegOutput = Soeg(authorityCvr);
 

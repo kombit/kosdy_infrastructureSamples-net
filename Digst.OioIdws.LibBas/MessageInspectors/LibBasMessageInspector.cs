@@ -73,9 +73,6 @@ namespace Digst.OioIdws.LibBas.MessageInspectors
         /// <param name="correlationState"></param>
         public void AfterReceiveReply(ref Message reply, object correlationState)
         {
-            Logger.Instance.Trace("Validating liberty basic framework header on response from WSP.");
-            ValidateLibertyBasicFrameworkHeader(reply);
-            Logger.Instance.Trace("Liberty basic framework header validated fine on response from WSP.");
             Logger.Instance.Trace("Validating WS-Adressing headers on response from WSP.");
             ValidateWsAddressingHeadersRecievedFromWsp(reply);
             Logger.Instance.Trace("WS-Adressing headers validated fine on response from WSP.");
