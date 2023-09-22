@@ -1,17 +1,15 @@
 svcutil.exe ^
- wsdl\token\*.wsdl ^
- *.xsd ^
- sp\*.wsdl ^
- sp\*.xsd ^
- SF1470_EP_SD1\xsd\1.2.STS-4\*.xsd ^
- SF1470_EP_SD1\xsd\common\*.xsd ^
+ wsdl\SagDokumentIndeksService_6.wsdl ^
+ wsdl\xsd\6.0.STS-0\*.xsd ^
+ wsdl\xsd\common\*.xsd ^
+ wsdl\xsd\policies\*.wsdl ^
  /noLogo /n:"*,Kombit.InfrastructureSamples.SagDokumentIndeksService"  /d:..\..\Kombit.InfrastructureSamples\SagDokumentIndeks\ /o:SagDokumentIndeksService.cs
 
 xsd.exe ^
-SF1470_EP_SD1\xsd\1.2.STS-4\GenerelleDefinitioner.xsd ^
-SF1470_EP_SD1\xsd\1.2.STS-4\SagIndeks.xsd ^
-SF1470_EP_SD1\xsd\1.2.STS-4\DokumentIndeks.xsd ^
-SF1470_EP_SD1\xsd\common\SagDokObjekt.xsd ^
+ wsdl\xsd\6.0.STS-0\GenerelleDefinitioner.xsd ^
+ wsdl\xsd\6.0.STS-0\SagIndeks.xsd ^
+ wsdl\xsd\6.0.STS-0\DokumentIndeks.xsd ^
+ wsdl\xsd\common\SagDokObjekt.xsd ^
 /e:SagIndeksEgenskaber /e:SagspartLokalUdvidelse /e:SagsaktoerLokalUdvidelse /e:SagsklasseLokalUdvidelse /e:SagsgenstandeLokalUdvidelse /e:DokumentaktoerLokalUdvidelse /e:DokumentaktoerLokalUdvidelse /e:DokumentklasseLokalUdvidelse /e:DokumentpartLokalUdvidelse ^
 /c /order /nologo /n:"Kombit.InfrastructureSamples.SagDokumentIndeksService" /o:..\..\Kombit.InfrastructureSamples\SagDokumentIndeks\
 

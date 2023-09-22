@@ -11,7 +11,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
     /// <summary>
     /// Class for handling requests to SagDokumentIndeksService
     /// </summary>
-    internal class SagDokumentIndeks {
+    public class SagDokumentIndeks {
 
         private SecurityToken token;
         private SagDokumentIndeksPortType port;
@@ -21,8 +21,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
         /// Uses input variables defined in ConfigVariables. 
         /// </summary>
         /// <param name="sagUuid">The UUID of the imported case</param>
-        /// <returns>Prints status code and status text to the console</returns>
-        internal void Importer(string sagUuid) {
+        /// <returns>Prints status code and status text to the console 
+        /// and returns output so it can be used in testing the method</returns>
+        public importerResponse Importer(string sagUuid) {
              
             //Class instances 
             var virksomhed = new Virksomhed.Virksomhed();
@@ -67,13 +68,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
 
             importerRequest request = new importerRequest()
             {
-                ImporterRequest1 = new ImporterRequestType()
-                {
-                    ImporterSagDokumentIndeksInput = new SagDokObjektType[] {
+                ImporterSagDokumentIndeksInput = new SagDokObjektType[] {
                         new SagType() {
                             UUIDIdentifikator = sagUuid,
-                            Registrering = new RegistreringType2[] {
-                                new RegistreringType2() {
+                            Registrering = new RegistreringType3[] {
+                                new RegistreringType3() {
                                     Tidspunkt = ConfigVariables.SAG_TIDSPUNKT,
                                     TidspunktSpecified = true,
                                     LivscyklusKode = LivscyklusKodeType.Importeret, // Constant
@@ -82,9 +81,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                         Item = ConfigVariables.AKTOER_REF, 
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
-                                    AttributListe = new AttributListeType1() {
-                                        Egenskaber = new EgenskaberType1[] {
-                                            new EgenskaberType1() {
+                                    AttributListe = new AttributListeType() {
+                                        Egenskaber = new EgenskaberType[] {
+                                            new EgenskaberType() {
                                                 BrugervendtNoegle = ConfigVariables.SAGS_NUMMER,
                                                 Sagsnummer = ConfigVariables.SAGS_NUMMER,
                                                 Titel = ConfigVariables.SAGS_TITEL,
@@ -97,6 +96,8 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                                     
                                                     Foelsomhed = FoelsomhedTypeX.IKKE_FORTROLIGE_DATA, // Can be changed depending on the sensitivity of the data
                                                     FoelsomhedSpecified = true,
+                                                    OprettetTidspunkt = DateTime.Now,
+                                                    OprettetTidspunktSpecified = true,  
                                                     Virkning = new VirkningTypeX() {
                                                         AktoerRef = new UnikIdTypeX() {
                                                             Item = ConfigVariables.AKTOER_REF,
@@ -115,11 +116,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                             }
                                         }
                                     },
-                                    TilstandListe = new TilstandListeType1() {
-                                        Fremdrift = new FremdriftType1[] {
+                                    TilstandListe = new TilstandListeType() {
+                                        Fremdrift = new FremdriftType[] {
                                             // List here all the states in the case. The possible states can be seen in the enum FremdriftStatusKodeType1
-                                            new FremdriftType1() {
-                                                FremdriftStatusKode = FremdriftStatusKodeType1.Opstaaet,
+                                            new FremdriftType() {
+                                                FremdriftStatusKode = FremdriftStatusKodeType.Opstaaet,
                                                 FremdriftStatusKodeSpecified = true,
                                                 Virkning = new VirkningType() {
                                                     AktoerRef = new UnikIdType() {
@@ -136,8 +137,8 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                                     }
                                                 }
                                             },
-                                            new FremdriftType1() {
-                                                FremdriftStatusKode = FremdriftStatusKodeType1.Afsluttet,
+                                            new FremdriftType() {
+                                                FremdriftStatusKode = FremdriftStatusKodeType.Afsluttet,
                                                 FremdriftStatusKodeSpecified = true,
                                                 Virkning = new VirkningType() {
                                                     AktoerRef = new UnikIdType() {
@@ -156,7 +157,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                             }
                                         }
                                     },
-                                    RelationListe = new RelationListeType1() {
+                                    RelationListe = new RelationListeType() {
                                         Sagsaktoer = new RelationType[] {
                                             // The case owner (Ejer) 
                                             CreateRelationWithUdvidelse(
@@ -230,15 +231,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                                 }
                                             )
                                         },
-                                        Sagsarkiv = new RelationType[] {
-                                            // The archive (Behandlingsarkiv) 
-                                            CreateRelation(
-                                                ConfigVariables.BEHANDLINGSARKIV_ROLLE_UUID,
-                                                ConfigVariables.ARKIV_TYPE_UUID,
-                                                ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
-                                                null  
-                                            )
-                                        },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Udvidelse = new SagsitsystemRelationType[] {
                                                 // The master IT-system (IT-system Master)
@@ -281,8 +273,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                                 }
                             }
                         }
-                    }
-                },
+                    },
                 RequestHeader = RequestHeader
             };
             // End of the Importer Request 
@@ -291,10 +282,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
             importerResponse response = Port.importer(request);
 
             // Prints response in the console
-            foreach (var item in response.ImporterResponse1.ImporterSagDokumentIndeksOutput.Items)
+            foreach (var item in response.ImporterSagDokumentIndeksOutput.Items)
             {
                 Console.WriteLine("Importing Case...\n *Status: {0}\n *StatusText: {1}\n", item.StatusKode, item.FejlbeskedTekst);
             }
+            return response;
         }
 
         /// <summary>
@@ -303,10 +295,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
         /// Outputs case number if a case is found.
         /// </summary>
         /// <param name="uuid">The UUID of the case</param>
-        internal void Fremsoeg(string uuid) {
+        public fremsoegResponse Fremsoeg(string uuid) {
             fremsoegRequest request = new fremsoegRequest() {
-                FremsoegRequest1 = new FremsoegRequestType() {
-                    FremsoegSagDokumentIndeksInput = new FremsoegSagDokumentIndeksInputType() {
+                FremsoegSagDokumentIndeksInput = new FremsoegSagDokumentIndeksInputType() {
                         SagUuid = new string[] {
                             uuid
                         },
@@ -318,8 +309,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                             }
                         }
 
-                    } 
-                },
+                    },
                 RequestHeader = RequestHeader
             };
 
@@ -327,19 +317,19 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
             fremsoegResponse response = Port.fremsoeg(request);
 
             // Prints standard response in the console
-            var retur = response.FremsoegResponse1.FremsoegSagDokumentIndeksOutput.StandardRetur;
+            var retur = response.FremsoegSagDokumentIndeksOutput.StandardRetur;
             Console.WriteLine("Searching for case by UUID...\n *Status: {0}\n *StatusText: {1}", retur.StatusKode, retur.FejlbeskedTekst);
             
             // The case number (Sagsnummer) is only printed if a case is found 
-            if (response.FremsoegResponse1.FremsoegSagDokumentIndeksOutput.Antal != null
-                && response.FremsoegResponse1.FremsoegSagDokumentIndeksOutput.Antal.Length > 0)
+            if (response.FremsoegSagDokumentIndeksOutput.Antal != null
+                && response.FremsoegSagDokumentIndeksOutput.Antal.Length > 0)
             {
                 // The case number (Sagsnummer) is retrieved from the returned XML
-                var sagsNummer = response.FremsoegResponse1.FremsoegSagDokumentIndeksOutput.SagFiltreretOejebliksbillede[0].
+                var sagsNummer = response.FremsoegSagDokumentIndeksOutput.SagFiltreretOejebliksbillede[0].
                 Registrering[0].AttributListe.Egenskaber[0].Sagsnummer;
                 Console.WriteLine(" *Case Number: " + sagsNummer + "\n");
             }
-
+            return response; 
         }
 
         /// <summary> 
@@ -347,15 +337,13 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
         /// Outputs status code and status text to the console
         /// </summary>
         /// <param name="uuid">The UUID of the case to remove</param>
-        internal void Fjern(string uuid) {
+        public fjernResponse Fjern(string uuid) {
             fjernRequest request = new fjernRequest() {
-                FjernRequest1 = new FjernRequestType() {
-                    FjernSagDokumentIndeksInput = new FjernSagDokumentIndeksInputType() {
-                        Items = new UnikIdType[] {
-                            new UnikIdType() {
-                                Item = uuid,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            }
+                FjernSagDokumentIndeksInput = new FjernSagDokumentIndeksInputType() {
+                    Items = new UnikIdType[] {
+                        new UnikIdType() {
+                            Item = uuid,
+                            ItemElementName = ItemChoiceType.UUIDIdentifikator
                         }
                     }
                 },
@@ -366,9 +354,10 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
             fjernResponse response = Port.fjern(request);
 
             // Prints response in the console
-            foreach (var item in response.FjernResponse1.FjernSagDokumentIndeksOutput.Items) {
+            foreach (var item in response.FjernSagDokumentIndeksOutput.Items) {
                 Console.WriteLine("Removing case...\n *Status: {0}\n *Statustext: {1}\n", item.StatusKode, item.FejlbeskedTekst);
             }
+            return response; 
         }
 
         /// <summary>

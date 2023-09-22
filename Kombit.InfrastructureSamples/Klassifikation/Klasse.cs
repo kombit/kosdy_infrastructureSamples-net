@@ -11,7 +11,7 @@ namespace Kombit.InfrastructureSamples.Klassifikation
     /// <summary>
     /// Class for handling requests to KlasseService
     /// </summary>
-    internal class Klasse {
+    public class Klasse {
 
         private SecurityToken token;
         private KlassePortType port;
@@ -22,10 +22,10 @@ namespace Kombit.InfrastructureSamples.Klassifikation
         /// Next LIST is used to get the full Klasse object based on the Klasse UUID found by searching.
         /// </summary>
         /// <returns>
-        /// Prints the result to the console
+        /// Prints the result to the console and returns output so it can be used in testing the method
         /// </returns>
         /// <param name="brugervendtNoegle">Key (brugervendt nøgle) to search for</param> 
-        internal void SoegKlasse(string brugervendtNoegle)
+        public SoegOutputType SoegKlasse(string brugervendtNoegle)
         {
             Console.WriteLine("\nSearch for class with key: {0} with the following result:", brugervendtNoegle);
 
@@ -35,14 +35,14 @@ namespace Kombit.InfrastructureSamples.Klassifikation
 
             // Chech if status == 20 (OK)
             if (soegOutput.StandardRetur.StatusKode != "20")
-                return;
+                return soegOutput;
 
             // Check if any UUID was found
             var uuids = soegOutput.IdListe; 
             if (uuids == null || uuids.Length == 0)
             { 
                 Console.WriteLine("No result for {0}", brugervendtNoegle);
-                return; 
+                return soegOutput; 
             } 
 
             // Call List with the found UUID(s)
@@ -50,7 +50,7 @@ namespace Kombit.InfrastructureSamples.Klassifikation
 
             /// Print output (klassetitel) in the console 
             /// This examples assumes that only one object is returned
-            var klasseUUID = listOutput.FiltreretOejebliksbillede[0].ObjektType.UUIDIdentifikator;
+            var klasseUUID = listOutput.FiltreretOejebliksbillede[0].ObjektID.UUIDIdentifikator;
             var klasseTitel = listOutput.FiltreretOejebliksbillede[0].Registrering[0].AttributListe[0].TitelTekst;
             var klasseBrugervendtNoegle = listOutput.FiltreretOejebliksbillede[0].Registrering[0].AttributListe[0].BrugervendtNoegleTekst;
 
@@ -73,6 +73,7 @@ namespace Kombit.InfrastructureSamples.Klassifikation
             {
                 Console.WriteLine("\n* Gyldig fra: N/A" + "\n* Gyldig til: N/A");
             }
+            return soegOutput;
 
         }
 
@@ -102,7 +103,7 @@ namespace Kombit.InfrastructureSamples.Klassifikation
             var listOutput = List(uuids);
 
             /// This examples assumes that only one object is returned
-            var klasseUUID = listOutput.FiltreretOejebliksbillede[0].ObjektType.UUIDIdentifikator;
+            var klasseUUID = listOutput.FiltreretOejebliksbillede[0].ObjektID.UUIDIdentifikator;
             var klasseTitel = listOutput.FiltreretOejebliksbillede[0].Registrering[0].AttributListe[0].TitelTekst;
 
             return new KeyValuePair<string, string>(klasseUUID, klasseTitel);

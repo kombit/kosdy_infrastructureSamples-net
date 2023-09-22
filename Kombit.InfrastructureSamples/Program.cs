@@ -17,7 +17,7 @@ namespace Kombit.InfrastructureSamples
             // Class instances
             var sagdokumentIndeks = new SagDokumentIndeks.SagDokumentIndeks();
             var klassifikation = new Klassifikation.Klasse();
-            var organisation6 = new Organisation.Organisation();
+            var organisation = new Organisation.Organisation();
 
             // Prints user interface 
             Console.WriteLine("*************************************************************************************************");
@@ -46,7 +46,7 @@ namespace Kombit.InfrastructureSamples
                     return true;
                 case "5":
                     // Search Virksomhed
-                    organisation6.GetOrganisationByCvr(ConfigVariables.MYNDIGHEDS_CVR);
+                    organisation.GetOrganisationByCvr(ConfigVariables.MYNDIGHEDS_CVR);
                     return true;
                 case "6":
                     // Search Class
