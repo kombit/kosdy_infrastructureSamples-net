@@ -9,7 +9,7 @@ using System.ServiceModel.Channels;
 
 namespace Kombit.InfrastructureSamples.Organisation
 {
-    class Organisation
+    public class Organisation
     {
         private SecurityToken token;
         private OrganisationPortType port;
@@ -21,8 +21,8 @@ namespace Kombit.InfrastructureSamples.Organisation
         /// Finally the LAES operation in OrganisationService is used to read the full Organisation object
         /// </summary>
         /// <param name="authorityCVR">CVR for the authority</param>
-        /// <returns>Prints the output to the console</returns>
-        internal void GetOrganisationByCvr(string authorityCVR)
+        /// <returns>Prints the output to the console and returns output so it can be used in testing the method</returns>
+        public (string,string,string) GetOrganisationByCvr(string authorityCVR)
         {
             Console.WriteLine("\nSearching for organization with CVR {0} with the following result:", authorityCVR);
 
@@ -35,6 +35,8 @@ namespace Kombit.InfrastructureSamples.Organisation
             var organisation = GetOrganisationUuidName(virksomhedUuid);
 
             Console.WriteLine(" *Virksomhed UUID: {0}\n *Organisation UUID: {1}\n *Organisation Name: {2}\n", virksomhedUuid, organisation.Key, organisation.Value);
+
+            return (virksomhedUuid,organisation.Key,organisation.Value);
         }
 
         /// <summary>
@@ -45,7 +47,7 @@ namespace Kombit.InfrastructureSamples.Organisation
         /// </summary>
         /// <param name="authorityCVR">CVR for the authority</param>
         /// <returns>A KeyValuePair with the Organisation UUID (key) and Organisation name (name)</returns>
-        internal KeyValuePair<string, string> GetOrganisationUuidName(string virksomhedUuid)
+        public KeyValuePair<string, string> GetOrganisationUuidName(string virksomhedUuid)
         {
             var soegOutput = Soeg(virksomhedUuid);
 

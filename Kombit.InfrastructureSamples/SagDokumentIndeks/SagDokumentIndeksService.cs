@@ -10,113 +10,15 @@
 
 namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
 {
-    using System.Runtime.Serialization;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceplatformFaultType", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
-    public partial class ServiceplatformFaultType : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-        
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private Kombit.InfrastructureSamples.SagDokumentIndeksService.ErrorListType ErrorListField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.ErrorListType ErrorList
-        {
-            get
-            {
-                return this.ErrorListField;
-            }
-            set
-            {
-                this.ErrorListField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ErrorListType", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/", ItemName="Error")]
-    public class ErrorListType : System.Collections.Generic.List<Kombit.InfrastructureSamples.SagDokumentIndeksService.ErrorType>
-    {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ErrorType", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
-    public partial class ErrorType : object, System.Runtime.Serialization.IExtensibleDataObject
-    {
-        
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private string ErrorCodeField;
-        
-        private string ErrorTextField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-        {
-            get
-            {
-                return this.extensionDataField;
-            }
-            set
-            {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string ErrorCode
-        {
-            get
-            {
-                return this.ErrorCodeField;
-            }
-            set
-            {
-                this.ErrorCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public string ErrorText
-        {
-            get
-            {
-                return this.ErrorTextField;
-            }
-            set
-            {
-                this.ErrorTextField = value;
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", ConfigurationName="Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://stoettesystemerne.dk/sagsogdokumentindeks", ConfigurationName="Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType")]
     public interface SagDokumentIndeksPortType
     {
         
         // CODEGEN: Generating message contract since the operation fjern is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/fjern" +
-            "", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Kombit.InfrastructureSamples.SagDokumentIndeksService.ServiceplatformFaultType), Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/fjern" +
-            "", Name="ServiceplatformFault", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/fjern", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BasicOutputType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RetInputType))]
@@ -124,15 +26,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SoegInputType))]
         Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernResponse fjern(Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/fjern" +
-            "", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/fjern", ReplyAction="*")]
         System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernResponse> fjernAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest request);
         
         // CODEGEN: Generating message contract since the operation importer is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/impor" +
-            "ter", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Kombit.InfrastructureSamples.SagDokumentIndeksService.ServiceplatformFaultType), Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/impor" +
-            "ter", Name="ServiceplatformFault", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/importer", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BasicOutputType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RetInputType))]
@@ -140,15 +38,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SoegInputType))]
         Kombit.InfrastructureSamples.SagDokumentIndeksService.importerResponse importer(Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/impor" +
-            "ter", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/importer", ReplyAction="*")]
         System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.importerResponse> importerAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest request);
         
         // CODEGEN: Generating message contract since the operation opdater is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/opdat" +
-            "er", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Kombit.InfrastructureSamples.SagDokumentIndeksService.ServiceplatformFaultType), Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/opdat" +
-            "er", Name="ServiceplatformFault", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/opdater", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BasicOutputType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RetInputType))]
@@ -156,15 +50,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SoegInputType))]
         Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterResponse opdater(Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/opdat" +
-            "er", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/opdater", ReplyAction="*")]
         System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterResponse> opdaterAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest request);
         
         // CODEGEN: Generating message contract since the operation fremsoeg is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/frems" +
-            "oeg", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Kombit.InfrastructureSamples.SagDokumentIndeksService.ServiceplatformFaultType), Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/frems" +
-            "oeg", Name="ServiceplatformFault", Namespace="http://serviceplatformen.dk/xml/schemas/ServiceplatformFault/1/")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/fremsoeg", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BasicOutputType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RetInputType))]
@@ -172,8 +62,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SoegInputType))]
         Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegResponse fremsoeg(Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/frems" +
-            "oeg", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://kombit.dk/sts/sagdokumentindeks/fremsoeg", ReplyAction="*")]
         System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegResponse> fremsoegAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest request);
     }
     
@@ -207,124 +96,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelleoperationer:1.2.4.0")]
-    public partial class PagineringType
-    {
-        
-        private string foersteResultatReferenceField;
-        
-        private string maksimalAntalKvantitetField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", DataType="integer", Order=0)]
-        public string FoersteResultatReference
-        {
-            get
-            {
-                return this.foersteResultatReferenceField;
-            }
-            set
-            {
-                this.foersteResultatReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", DataType="integer", Order=1)]
-        public string MaksimalAntalKvantitet
-        {
-            get
-            {
-                return this.maksimalAntalKvantitetField;
-            }
-            set
-            {
-                this.maksimalAntalKvantitetField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
-    public partial class AntalType
-    {
-        
-        private AntalTypeElement elementField;
-        
-        private string antalField;
-        
-        private PagineringType pagineringField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public AntalTypeElement Element
-        {
-            get
-            {
-                return this.elementField;
-            }
-            set
-            {
-                this.elementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
-        public string Antal
-        {
-            get
-            {
-                return this.antalField;
-            }
-            set
-            {
-                this.antalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public PagineringType Paginering
-        {
-            get
-            {
-                return this.pagineringField;
-            }
-            set
-            {
-                this.pagineringField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
-    public enum AntalTypeElement
-    {
-        
-        /// <remarks/>
-        sager,
-        
-        /// <remarks/>
-        dokumenter,
-        
-        /// <remarks/>
-        journalnotater,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FiltreretOejebliksbilledeType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FiltreretOejebliksbilledeType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class FiltreretOejebliksbilledeType1
     {
         
@@ -362,9 +134,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaesFiltreretOutputType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DokumentIndeksType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SagType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DokumentIndeksType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaesFiltreretOutputType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -395,21 +167,15 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
-    public partial class LaesFiltreretOutputType : SagDokObjektType
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class DokumentIndeksType : SagDokObjektType
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
+    public partial class SagType : SagDokObjektType
     {
         
         private RegistreringType3[] registreringField;
+        
+        private bool udenNotifikationField;
+        
+        private bool udenNotifikationFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Registrering", Order=0)]
@@ -424,6 +190,34 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.registreringField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool UdenNotifikation
+        {
+            get
+            {
+                return this.udenNotifikationField;
+            }
+            set
+            {
+                this.udenNotifikationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UdenNotifikationSpecified
+        {
+            get
+            {
+                return this.udenNotifikationFieldSpecified;
+            }
+            set
+            {
+                this.udenNotifikationFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -431,7 +225,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class RegistreringType3 : RegistreringType1
     {
         
@@ -440,8 +234,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         private TilstandListeType tilstandListeField;
         
         private RelationListeType relationListeField;
-        
-        private VariantListeType variantListeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -484,20 +276,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.relationListeField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public VariantListeType VariantListe
-        {
-            get
-            {
-                return this.variantListeField;
-            }
-            set
-            {
-                this.variantListeField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -505,7 +283,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class AttributListeType
     {
         
@@ -528,7 +306,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=1)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -547,7 +325,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class EgenskaberType
     {
         
@@ -555,31 +333,25 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         private string brugervendtNoegleField;
         
-        private string titelField;
+        private bool afleveretIndikatorField;
+        
+        private bool afleveretIndikatorFieldSpecified;
         
         private string beskrivelseField;
         
-        private System.DateTime brevDatoField;
-        
-        private bool brevDatoFieldSpecified;
-        
-        private OffentlighedUndtagetType offentlighedUndtagetField;
-        
-        private string versionIdentifikatorField;
-        
-        private string underversionIdentifikatorField;
+        private string hjemmelSpecifikationField;
         
         private string kassationskodeField;
         
-        private string dokumentnummerField;
+        private OffentlighedUndtagetType offentlighedUndtagetField;
         
-        private FoelsomhedType foelsomhedField;
+        private bool principielIndikatorField;
         
-        private bool foelsomhedFieldSpecified;
+        private bool principielIndikatorFieldSpecified;
         
-        private Type typeField;
+        private string sagsnummerField;
         
-        private bool typeFieldSpecified;
+        private string titelField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -611,15 +383,29 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Titel
+        public bool AfleveretIndikator
         {
             get
             {
-                return this.titelField;
+                return this.afleveretIndikatorField;
             }
             set
             {
-                this.titelField = value;
+                this.afleveretIndikatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AfleveretIndikatorSpecified
+        {
+            get
+            {
+                return this.afleveretIndikatorFieldSpecified;
+            }
+            set
+            {
+                this.afleveretIndikatorFieldSpecified = value;
             }
         }
         
@@ -638,77 +424,21 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
-        public System.DateTime BrevDato
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string HjemmelSpecifikation
         {
             get
             {
-                return this.brevDatoField;
+                return this.hjemmelSpecifikationField;
             }
             set
             {
-                this.brevDatoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BrevDatoSpecified
-        {
-            get
-            {
-                return this.brevDatoFieldSpecified;
-            }
-            set
-            {
-                this.brevDatoFieldSpecified = value;
+                this.hjemmelSpecifikationField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public OffentlighedUndtagetType OffentlighedUndtaget
-        {
-            get
-            {
-                return this.offentlighedUndtagetField;
-            }
-            set
-            {
-                this.offentlighedUndtagetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=6)]
-        public string VersionIdentifikator
-        {
-            get
-            {
-                return this.versionIdentifikatorField;
-            }
-            set
-            {
-                this.versionIdentifikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=7)]
-        public string UnderversionIdentifikator
-        {
-            get
-            {
-                return this.underversionIdentifikatorField;
-            }
-            set
-            {
-                this.underversionIdentifikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string Kassationskode
         {
             get
@@ -722,72 +452,72 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public OffentlighedUndtagetType OffentlighedUndtaget
+        {
+            get
+            {
+                return this.offentlighedUndtagetField;
+            }
+            set
+            {
+                this.offentlighedUndtagetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool PrincipielIndikator
+        {
+            get
+            {
+                return this.principielIndikatorField;
+            }
+            set
+            {
+                this.principielIndikatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PrincipielIndikatorSpecified
+        {
+            get
+            {
+                return this.principielIndikatorFieldSpecified;
+            }
+            set
+            {
+                this.principielIndikatorFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Sagsnummer
+        {
+            get
+            {
+                return this.sagsnummerField;
+            }
+            set
+            {
+                this.sagsnummerField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string Dokumentnummer
+        public string Titel
         {
             get
             {
-                return this.dokumentnummerField;
+                return this.titelField;
             }
             set
             {
-                this.dokumentnummerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public FoelsomhedType Foelsomhed
-        {
-            get
-            {
-                return this.foelsomhedField;
-            }
-            set
-            {
-                this.foelsomhedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FoelsomhedSpecified
-        {
-            get
-            {
-                return this.foelsomhedFieldSpecified;
-            }
-            set
-            {
-                this.foelsomhedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public Type Type
-        {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TypeSpecified
-        {
-            get
-            {
-                return this.typeFieldSpecified;
-            }
-            set
-            {
-                this.typeFieldSpecified = value;
+                this.titelField = value;
             }
         }
     }
@@ -1055,69 +785,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public enum FoelsomhedType
-    {
-        
-        /// <remarks/>
-        IKKE_FORTROLIGE_DATA,
-        
-        /// <remarks/>
-        FORTROLIGE_PERSONOPLYSNINGER,
-        
-        /// <remarks/>
-        FOELSOMME_PERSONOPLYSNINGER,
-        
-        /// <remarks/>
-        VIP_SAGER,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public enum Type
-    {
-        
-        /// <remarks/>
-        Faktura,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Brev, indgaaende")]
-        Brevindgaaende,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Brev, udgaaende")]
-        Brevudgaaende,
-        
-        /// <remarks/>
-        Brev,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Internt Notat")]
-        InterntNotat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Eksternt Notat")]
-        EksterntNotat,
-        
-        /// <remarks/>
-        Rapport,
-        
-        /// <remarks/>
-        Dagsorden,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelledefinitioner:6")]
     public partial class LokalUdvidelseListeType
     {
         
         private System.Xml.XmlElement[] anyField;
+        
+        private System.DateTime senestAendretTidspunktField;
+        
+        private bool senestAendretTidspunktFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute(Order=0)]
@@ -1132,6 +810,34 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.anyField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime SenestAendretTidspunkt
+        {
+            get
+            {
+                return this.senestAendretTidspunktField;
+            }
+            set
+            {
+                this.senestAendretTidspunktField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SenestAendretTidspunktSpecified
+        {
+            get
+            {
+                return this.senestAendretTidspunktFieldSpecified;
+            }
+            set
+            {
+                this.senestAendretTidspunktFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -1139,7 +845,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class TilstandListeType
     {
         
@@ -1162,7 +868,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=1)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -1181,7 +887,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class FremdriftType
     {
         
@@ -1237,30 +943,21 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public enum FremdriftStatusKodeType
     {
         
         /// <remarks/>
-        Modtaget,
+        Opstaaet,
         
         /// <remarks/>
-        Fordelt,
+        Oplyst,
         
         /// <remarks/>
-        Underudarbejdelse,
+        Afgjort,
         
         /// <remarks/>
-        Underreview,
-        
-        /// <remarks/>
-        Publiceret,
-        
-        /// <remarks/>
-        Endeligt,
-        
-        /// <remarks/>
-        Afleveret,
+        Afsluttet,
     }
     
     /// <remarks/>
@@ -1268,78 +965,110 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class RelationListeType
     {
         
-        private RelationType[] dokumentrelationField;
+        private RelationType[] sagsaktoerField;
         
-        private RelationType[] dokumentaktoerField;
+        private RelationType[] sagsklasseField;
         
-        private RelationType[] dokumentpartField;
+        private RelationType[] sagspartField;
         
-        private RelationType[] dokumentklasseField;
+        private RelationType[] sagsrelationField;
+        
+        private RelationType[] sagsgenstandeField;
+        
+        private JournalpostRelationType[] journalpostField;
         
         private LokalUdvidelseListeType lokalUdvidelseListeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Dokumentrelation", Order=0)]
-        public RelationType[] Dokumentrelation
+        [System.Xml.Serialization.XmlElementAttribute("Sagsaktoer", Order=0)]
+        public RelationType[] Sagsaktoer
         {
             get
             {
-                return this.dokumentrelationField;
+                return this.sagsaktoerField;
             }
             set
             {
-                this.dokumentrelationField = value;
+                this.sagsaktoerField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Dokumentaktoer", Order=1)]
-        public RelationType[] Dokumentaktoer
+        [System.Xml.Serialization.XmlElementAttribute("Sagsklasse", Order=1)]
+        public RelationType[] Sagsklasse
         {
             get
             {
-                return this.dokumentaktoerField;
+                return this.sagsklasseField;
             }
             set
             {
-                this.dokumentaktoerField = value;
+                this.sagsklasseField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Dokumentpart", Order=2)]
-        public RelationType[] Dokumentpart
+        [System.Xml.Serialization.XmlElementAttribute("Sagspart", Order=2)]
+        public RelationType[] Sagspart
         {
             get
             {
-                return this.dokumentpartField;
+                return this.sagspartField;
             }
             set
             {
-                this.dokumentpartField = value;
+                this.sagspartField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Dokumentklasse", Order=3)]
-        public RelationType[] Dokumentklasse
+        [System.Xml.Serialization.XmlElementAttribute("Sagsrelation", Order=3)]
+        public RelationType[] Sagsrelation
         {
             get
             {
-                return this.dokumentklasseField;
+                return this.sagsrelationField;
             }
             set
             {
-                this.dokumentklasseField = value;
+                this.sagsrelationField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("Sagsgenstande", Order=4)]
+        public RelationType[] Sagsgenstande
+        {
+            get
+            {
+                return this.sagsgenstandeField;
+            }
+            set
+            {
+                this.sagsgenstandeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Journalpost", Order=5)]
+        public JournalpostRelationType[] Journalpost
+        {
+            get
+            {
+                return this.journalpostField;
+            }
+            set
+            {
+                this.journalpostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=6)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -1354,16 +1083,16 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JournalpostRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DokumentitsystemRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SikkerhedsprofilRelationType1))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JournalpostRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SagsitsystemRelationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SikkerhedsprofilRelationType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelledefinitioner:6")]
     public partial class RelationType
     {
         
@@ -1469,59 +1198,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class DokumentitsystemRelationType : RelationType
-    {
-        
-        private string systemNavnField;
-        
-        private string systemURIField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string SystemNavn
-        {
-            get
-            {
-                return this.systemNavnField;
-            }
-            set
-            {
-                this.systemNavnField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string SystemURI
-        {
-            get
-            {
-                return this.systemURIField;
-            }
-            set
-            {
-                this.systemURIField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SikkerhedsprofilRelationType", Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class SikkerhedsprofilRelationType1 : RelationType
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class JournalpostRelationType : RelationType
     {
         
@@ -1547,7 +1224,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class JournalpostEgenskaberType
     {
         
@@ -1605,7 +1282,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class JournalnotatEgenskaberType
     {
         
@@ -1663,7 +1340,59 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class DokumentitsystemRelationType : RelationType
+    {
+        
+        private string systemNavnField;
+        
+        private string systemURIField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string SystemNavn
+        {
+            get
+            {
+                return this.systemNavnField;
+            }
+            set
+            {
+                this.systemNavnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string SystemURI
+        {
+            get
+            {
+                return this.systemURIField;
+            }
+            set
+            {
+                this.systemURIField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SikkerhedsprofilRelationType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class SikkerhedsprofilRelationType1 : RelationType
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagindeks:6")]
     public partial class SagsitsystemRelationType : RelationType
     {
         
@@ -1705,263 +1434,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagindeks:6")]
     public partial class SikkerhedsprofilRelationType : RelationType
     {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class VariantListeType
-    {
-        
-        private VariantType[] variantField;
-        
-        private LokalUdvidelseListeType lokalUdvidelseListeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Variant", Order=0)]
-        public VariantType[] Variant
-        {
-            get
-            {
-                return this.variantField;
-            }
-            set
-            {
-                this.variantField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=1)]
-        public LokalUdvidelseListeType LokalUdvidelseListe
-        {
-            get
-            {
-                return this.lokalUdvidelseListeField;
-            }
-            set
-            {
-                this.lokalUdvidelseListeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class VariantType
-    {
-        
-        private string variantField;
-        
-        private VariantEgenskaberType[] egenskaberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Variant
-        {
-            get
-            {
-                return this.variantField;
-            }
-            set
-            {
-                this.variantField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Egenskaber", Order=1)]
-        public VariantEgenskaberType[] Egenskaber
-        {
-            get
-            {
-                return this.egenskaberField;
-            }
-            set
-            {
-                this.egenskaberField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class VariantEgenskaberType
-    {
-        
-        private VirkningType virkningField;
-        
-        private bool arkiveringIndikatorField;
-        
-        private bool arkiveringIndikatorFieldSpecified;
-        
-        private bool delvisSkannetIndikatorField;
-        
-        private bool delvisSkannetIndikatorFieldSpecified;
-        
-        private bool offentliggoerelseIndikatorField;
-        
-        private bool offentliggoerelseIndikatorFieldSpecified;
-        
-        private bool produktionIndikatorField;
-        
-        private bool produktionIndikatorFieldSpecified;
-        
-        private string lokationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public VirkningType Virkning
-        {
-            get
-            {
-                return this.virkningField;
-            }
-            set
-            {
-                this.virkningField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool ArkiveringIndikator
-        {
-            get
-            {
-                return this.arkiveringIndikatorField;
-            }
-            set
-            {
-                this.arkiveringIndikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ArkiveringIndikatorSpecified
-        {
-            get
-            {
-                return this.arkiveringIndikatorFieldSpecified;
-            }
-            set
-            {
-                this.arkiveringIndikatorFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool DelvisSkannetIndikator
-        {
-            get
-            {
-                return this.delvisSkannetIndikatorField;
-            }
-            set
-            {
-                this.delvisSkannetIndikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DelvisSkannetIndikatorSpecified
-        {
-            get
-            {
-                return this.delvisSkannetIndikatorFieldSpecified;
-            }
-            set
-            {
-                this.delvisSkannetIndikatorFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool OffentliggoerelseIndikator
-        {
-            get
-            {
-                return this.offentliggoerelseIndikatorField;
-            }
-            set
-            {
-                this.offentliggoerelseIndikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool OffentliggoerelseIndikatorSpecified
-        {
-            get
-            {
-                return this.offentliggoerelseIndikatorFieldSpecified;
-            }
-            set
-            {
-                this.offentliggoerelseIndikatorFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool ProduktionIndikator
-        {
-            get
-            {
-                return this.produktionIndikatorField;
-            }
-            set
-            {
-                this.produktionIndikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ProduktionIndikatorSpecified
-        {
-            get
-            {
-                return this.produktionIndikatorFieldSpecified;
-            }
-            set
-            {
-                this.produktionIndikatorFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string Lokation
-        {
-            get
-            {
-                return this.lokationField;
-            }
-            set
-            {
-                this.lokationField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -1971,7 +1446,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:generelledefinitioner:6")]
     public partial class RegistreringType1 : RegistreringType
     {
         
@@ -2142,7 +1617,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RegistreringType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class RegistreringType2 : RegistreringType1
     {
         
@@ -2200,7 +1675,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AttributListeType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AttributListeType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class AttributListeType1
     {
         
@@ -2223,7 +1698,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=1)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -2242,7 +1717,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EgenskaberType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EgenskaberType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class EgenskaberType1
     {
         
@@ -2250,25 +1725,31 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         private string brugervendtNoegleField;
         
-        private bool afleveretIndikatorField;
-        
-        private bool afleveretIndikatorFieldSpecified;
+        private string titelField;
         
         private string beskrivelseField;
         
-        private string hjemmelSpecifikationField;
+        private System.DateTime brevDatoField;
         
-        private string kassationskodeField;
+        private bool brevDatoFieldSpecified;
         
         private OffentlighedUndtagetType offentlighedUndtagetField;
         
-        private bool principielIndikatorField;
+        private string versionIdentifikatorField;
         
-        private bool principielIndikatorFieldSpecified;
+        private string underversionIdentifikatorField;
         
-        private string sagsnummerField;
+        private string kassationskodeField;
         
-        private string titelField;
+        private string dokumentnummerField;
+        
+        private FoelsomhedType foelsomhedField;
+        
+        private bool foelsomhedFieldSpecified;
+        
+        private Type typeField;
+        
+        private bool typeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -2300,29 +1781,15 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool AfleveretIndikator
+        public string Titel
         {
             get
             {
-                return this.afleveretIndikatorField;
+                return this.titelField;
             }
             set
             {
-                this.afleveretIndikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AfleveretIndikatorSpecified
-        {
-            get
-            {
-                return this.afleveretIndikatorFieldSpecified;
-            }
-            set
-            {
-                this.afleveretIndikatorFieldSpecified = value;
+                this.titelField = value;
             }
         }
         
@@ -2341,35 +1808,35 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string HjemmelSpecifikation
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        public System.DateTime BrevDato
         {
             get
             {
-                return this.hjemmelSpecifikationField;
+                return this.brevDatoField;
             }
             set
             {
-                this.hjemmelSpecifikationField = value;
+                this.brevDatoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BrevDatoSpecified
+        {
+            get
+            {
+                return this.brevDatoFieldSpecified;
+            }
+            set
+            {
+                this.brevDatoFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string Kassationskode
-        {
-            get
-            {
-                return this.kassationskodeField;
-            }
-            set
-            {
-                this.kassationskodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public OffentlighedUndtagetType OffentlighedUndtaget
         {
             get
@@ -2383,58 +1850,114 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool PrincipielIndikator
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=6)]
+        public string VersionIdentifikator
         {
             get
             {
-                return this.principielIndikatorField;
+                return this.versionIdentifikatorField;
             }
             set
             {
-                this.principielIndikatorField = value;
+                this.versionIdentifikatorField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PrincipielIndikatorSpecified
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=7)]
+        public string UnderversionIdentifikator
         {
             get
             {
-                return this.principielIndikatorFieldSpecified;
+                return this.underversionIdentifikatorField;
             }
             set
             {
-                this.principielIndikatorFieldSpecified = value;
+                this.underversionIdentifikatorField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string Sagsnummer
+        public string Kassationskode
         {
             get
             {
-                return this.sagsnummerField;
+                return this.kassationskodeField;
             }
             set
             {
-                this.sagsnummerField = value;
+                this.kassationskodeField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string Titel
+        public string Dokumentnummer
         {
             get
             {
-                return this.titelField;
+                return this.dokumentnummerField;
             }
             set
             {
-                this.titelField = value;
+                this.dokumentnummerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public FoelsomhedType Foelsomhed
+        {
+            get
+            {
+                return this.foelsomhedField;
+            }
+            set
+            {
+                this.foelsomhedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FoelsomhedSpecified
+        {
+            get
+            {
+                return this.foelsomhedFieldSpecified;
+            }
+            set
+            {
+                this.foelsomhedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public Type Type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TypeSpecified
+        {
+            get
+            {
+                return this.typeFieldSpecified;
+            }
+            set
+            {
+                this.typeFieldSpecified = value;
             }
         }
     }
@@ -2442,9 +1965,71 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public enum FoelsomhedType
+    {
+        
+        /// <remarks/>
+        IKKE_FORTROLIGE_DATA,
+        
+        /// <remarks/>
+        FORTROLIGE_PERSONOPLYSNINGER,
+        
+        /// <remarks/>
+        FOELSOMME_PERSONOPLYSNINGER,
+        
+        /// <remarks/>
+        VIP_SAGER,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public enum Type
+    {
+        
+        /// <remarks/>
+        Faktura,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Brev, indgaaende")]
+        Brevindgaaende,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Brev, udgaaende")]
+        Brevudgaaende,
+        
+        /// <remarks/>
+        Brev,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Internt Notat")]
+        InterntNotat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Eksternt Notat")]
+        EksterntNotat,
+        
+        /// <remarks/>
+        Rapport,
+        
+        /// <remarks/>
+        Dagsorden,
+        
+        /// <remarks/>
+        Plan,
+        
+        /// <remarks/>
+        Andet,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TilstandListeType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TilstandListeType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class TilstandListeType1
     {
         
@@ -2467,7 +2052,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=1)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -2486,7 +2071,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FremdriftType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FremdriftType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class FremdriftType1
     {
         
@@ -2542,27 +2127,30 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FremdriftStatusKodeType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FremdriftStatusKodeType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public enum FremdriftStatusKodeType1
     {
         
         /// <remarks/>
-        Opstaaet,
+        Modtaget,
         
         /// <remarks/>
-        Oplyst,
+        Fordelt,
         
         /// <remarks/>
-        Afgjort,
+        Underudarbejdelse,
         
         /// <remarks/>
-        Bestilt,
+        Underreview,
         
         /// <remarks/>
-        Udfoert,
+        Publiceret,
         
         /// <remarks/>
-        Afsluttet,
+        Endeligt,
+        
+        /// <remarks/>
+        Afleveret,
     }
     
     /// <remarks/>
@@ -2570,126 +2158,78 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelationListeType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelationListeType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class RelationListeType1
     {
         
-        private RelationType[] sagsaktoerField;
+        private RelationType[] dokumentrelationField;
         
-        private RelationType[] sagsarkivField;
+        private RelationType[] dokumentaktoerField;
         
-        private RelationType[] sagsklasseField;
+        private RelationType[] dokumentpartField;
         
-        private RelationType[] sagspartField;
-        
-        private RelationType[] sagsrelationField;
-        
-        private RelationType[] sagsgenstandeField;
-        
-        private JournalpostRelationType[] journalpostField;
+        private RelationType[] dokumentklasseField;
         
         private LokalUdvidelseListeType lokalUdvidelseListeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagsaktoer", Order=0)]
-        public RelationType[] Sagsaktoer
+        [System.Xml.Serialization.XmlElementAttribute("Dokumentrelation", Order=0)]
+        public RelationType[] Dokumentrelation
         {
             get
             {
-                return this.sagsaktoerField;
+                return this.dokumentrelationField;
             }
             set
             {
-                this.sagsaktoerField = value;
+                this.dokumentrelationField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagsarkiv", Order=1)]
-        public RelationType[] Sagsarkiv
+        [System.Xml.Serialization.XmlElementAttribute("Dokumentaktoer", Order=1)]
+        public RelationType[] Dokumentaktoer
         {
             get
             {
-                return this.sagsarkivField;
+                return this.dokumentaktoerField;
             }
             set
             {
-                this.sagsarkivField = value;
+                this.dokumentaktoerField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagsklasse", Order=2)]
-        public RelationType[] Sagsklasse
+        [System.Xml.Serialization.XmlElementAttribute("Dokumentpart", Order=2)]
+        public RelationType[] Dokumentpart
         {
             get
             {
-                return this.sagsklasseField;
+                return this.dokumentpartField;
             }
             set
             {
-                this.sagsklasseField = value;
+                this.dokumentpartField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagspart", Order=3)]
-        public RelationType[] Sagspart
+        [System.Xml.Serialization.XmlElementAttribute("Dokumentklasse", Order=3)]
+        public RelationType[] Dokumentklasse
         {
             get
             {
-                return this.sagspartField;
+                return this.dokumentklasseField;
             }
             set
             {
-                this.sagspartField = value;
+                this.dokumentklasseField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagsrelation", Order=4)]
-        public RelationType[] Sagsrelation
-        {
-            get
-            {
-                return this.sagsrelationField;
-            }
-            set
-            {
-                this.sagsrelationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sagsgenstande", Order=5)]
-        public RelationType[] Sagsgenstande
-        {
-            get
-            {
-                return this.sagsgenstandeField;
-            }
-            set
-            {
-                this.sagsgenstandeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Journalpost", Order=6)]
-        public JournalpostRelationType[] Journalpost
-        {
-            get
-            {
-                return this.journalpostField;
-            }
-            set
-            {
-                this.journalpostField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:1.2.4.0", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:generelledefinitioner:6", Order=4)]
         public LokalUdvidelseListeType LokalUdvidelseListe
         {
             get
@@ -2708,8 +2248,8 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
-    public partial class SagType : SagDokObjektType
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class DokumentIndeksType : SagDokObjektType
     {
         
         private RegistreringType2[] registreringField;
@@ -2734,7 +2274,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class LaesFiltreretOutputType : SagDokObjektType
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class FiltreretOejebliksbilledeType
     {
         
@@ -2772,12 +2322,129 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpretOutputType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FremsoegSagDokumentIndeksOutputType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelleoperationer:6")]
+    public partial class PagineringType
+    {
+        
+        private string foersteResultatReferenceField;
+        
+        private string maksimalAntalKvantitetField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", DataType="integer", Order=0)]
+        public string FoersteResultatReference
+        {
+            get
+            {
+                return this.foersteResultatReferenceField;
+            }
+            set
+            {
+                this.foersteResultatReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sagdok:3.0.0", DataType="integer", Order=1)]
+        public string MaksimalAntalKvantitet
+        {
+            get
+            {
+                return this.maksimalAntalKvantitetField;
+            }
+            set
+            {
+                this.maksimalAntalKvantitetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
+    public partial class AntalType
+    {
+        
+        private AntalTypeElement elementField;
+        
+        private string antalField;
+        
+        private PagineringType pagineringField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public AntalTypeElement Element
+        {
+            get
+            {
+                return this.elementField;
+            }
+            set
+            {
+                this.elementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=1)]
+        public string Antal
+        {
+            get
+            {
+                return this.antalField;
+            }
+            set
+            {
+                this.antalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public PagineringType Paginering
+        {
+            get
+            {
+                return this.pagineringField;
+            }
+            set
+            {
+                this.pagineringField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
+    public enum AntalTypeElement
+    {
+        
+        /// <remarks/>
+        sager,
+        
+        /// <remarks/>
+        dokumenter,
+        
+        /// <remarks/>
+        journalnotater,
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ListOutputType1))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaesOutputType1))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ListOutputType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaesOutputType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpretOutputType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FremsoegSagDokumentIndeksOutputType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2817,6 +2484,8 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         private string fejlbeskedTekstField;
         
+        private string detaljeretFejlbeskedField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
         public string StatusKode
@@ -2842,6 +2511,20 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             set
             {
                 this.fejlbeskedTekstField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DetaljeretFejlbesked
+        {
+            get
+            {
+                return this.detaljeretFejlbeskedField;
+            }
+            set
+            {
+                this.detaljeretFejlbeskedField = value;
             }
         }
     }
@@ -2893,6 +2576,110 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ListOutputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class ListOutputType1 : BasicOutputType
+    {
+        
+        private FiltreretOejebliksbilledeType1[] filtreretOejebliksbilledeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("FiltreretOejebliksbillede", Order=0)]
+        public FiltreretOejebliksbilledeType1[] FiltreretOejebliksbillede
+        {
+            get
+            {
+                return this.filtreretOejebliksbilledeField;
+            }
+            set
+            {
+                this.filtreretOejebliksbilledeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LaesOutputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class LaesOutputType1 : BasicOutputType
+    {
+        
+        private FiltreretOejebliksbilledeType1 filtreretOejebliksbilledeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public FiltreretOejebliksbilledeType1 FiltreretOejebliksbillede
+        {
+            get
+            {
+                return this.filtreretOejebliksbilledeField;
+            }
+            set
+            {
+                this.filtreretOejebliksbilledeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
+    public partial class ListOutputType : BasicOutputType
+    {
+        
+        private FiltreretOejebliksbilledeType[] filtreretOejebliksbilledeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("FiltreretOejebliksbillede", Order=0)]
+        public FiltreretOejebliksbilledeType[] FiltreretOejebliksbillede
+        {
+            get
+            {
+                return this.filtreretOejebliksbilledeField;
+            }
+            set
+            {
+                this.filtreretOejebliksbilledeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sag:6")]
+    public partial class LaesOutputType : BasicOutputType
+    {
+        
+        private FiltreretOejebliksbilledeType filtreretOejebliksbilledeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public FiltreretOejebliksbilledeType FiltreretOejebliksbillede
+        {
+            get
+            {
+                return this.filtreretOejebliksbilledeField;
+            }
+            set
+            {
+                this.filtreretOejebliksbilledeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
     public partial class OpretOutputType : BasicOutputType
     {
@@ -2919,15 +2706,15 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class FremsoegSagDokumentIndeksOutputType : BasicOutputType
     {
         
         private AntalType[] antalField;
         
-        private FiltreretOejebliksbilledeType1[] sagFiltreretOejebliksbilledeField;
+        private FiltreretOejebliksbilledeType[] sagFiltreretOejebliksbilledeField;
         
-        private FiltreretOejebliksbilledeType[] dokumentFiltreretOejebliksbilledeField;
+        private FiltreretOejebliksbilledeType1[] dokumentFiltreretOejebliksbilledeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Antal", Order=0)]
@@ -2945,7 +2732,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SagFiltreretOejebliksbillede", Order=1)]
-        public FiltreretOejebliksbilledeType1[] SagFiltreretOejebliksbillede
+        public FiltreretOejebliksbilledeType[] SagFiltreretOejebliksbillede
         {
             get
             {
@@ -2959,7 +2746,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DokumentFiltreretOejebliksbillede", Order=2)]
-        public FiltreretOejebliksbilledeType[] DokumentFiltreretOejebliksbillede
+        public FiltreretOejebliksbilledeType1[] DokumentFiltreretOejebliksbillede
         {
             get
             {
@@ -2977,137 +2764,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ListOutputType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
-    public partial class ListOutputType1 : BasicOutputType
-    {
-        
-        private FiltreretOejebliksbilledeType1[] filtreretOejebliksbilledeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FiltreretOejebliksbillede", Order=0)]
-        public FiltreretOejebliksbilledeType1[] FiltreretOejebliksbillede
-        {
-            get
-            {
-                return this.filtreretOejebliksbilledeField;
-            }
-            set
-            {
-                this.filtreretOejebliksbilledeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LaesOutputType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
-    public partial class LaesOutputType1 : BasicOutputType
-    {
-        
-        private FiltreretOejebliksbilledeType1 filtreretOejebliksbilledeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public FiltreretOejebliksbilledeType1 FiltreretOejebliksbillede
-        {
-            get
-            {
-                return this.filtreretOejebliksbilledeField;
-            }
-            set
-            {
-                this.filtreretOejebliksbilledeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class ListOutputType : BasicOutputType
-    {
-        
-        private FiltreretOejebliksbilledeType[] filtreretOejebliksbilledeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FiltreretOejebliksbillede", Order=0)]
-        public FiltreretOejebliksbilledeType[] FiltreretOejebliksbillede
-        {
-            get
-            {
-                return this.filtreretOejebliksbilledeField;
-            }
-            set
-            {
-                this.filtreretOejebliksbilledeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class LaesOutputType : BasicOutputType
-    {
-        
-        private FiltreretOejebliksbilledeType filtreretOejebliksbilledeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public FiltreretOejebliksbilledeType FiltreretOejebliksbillede
-        {
-            get
-            {
-                return this.filtreretOejebliksbilledeField;
-            }
-            set
-            {
-                this.filtreretOejebliksbilledeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class FremsoegResponseType
-    {
-        
-        private FremsoegSagDokumentIndeksOutputType fremsoegSagDokumentIndeksOutputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=0)]
-        public FremsoegSagDokumentIndeksOutputType FremsoegSagDokumentIndeksOutput
-        {
-            get
-            {
-                return this.fremsoegSagDokumentIndeksOutputField;
-            }
-            set
-            {
-                this.fremsoegSagDokumentIndeksOutputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class DokumentSorteringType
     {
         
@@ -3163,7 +2820,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum DokumentSorteringFilterType
     {
         
@@ -3202,7 +2859,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum SorteringFilterRetningType
     {
         
@@ -3218,7 +2875,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class SagSorteringType
     {
         
@@ -3274,7 +2931,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum SagSorteringFilterType
     {
         
@@ -3316,7 +2973,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class SagVisType
     {
         
@@ -3340,7 +2997,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum SagVisFilterType
     {
         
@@ -3349,9 +3006,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         fremdrift,
-        
-        /// <remarks/>
-        sagsarkiv,
         
         /// <remarks/>
         sagsklasse,
@@ -3387,7 +3041,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class DokumentVisType
     {
         
@@ -3411,15 +3065,12 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum DokumentVisFilterType
     {
         
         /// <remarks/>
         egenskaber,
-        
-        /// <remarks/>
-        varianter,
         
         /// <remarks/>
         fremdrift,
@@ -3448,7 +3099,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class FremsoegSagDokumentIndeksInputType
     {
         
@@ -3544,7 +3195,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class SoegUdtrykType
     {
         
@@ -3586,9 +3237,9 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("NOT", typeof(SoegUdtrykType), Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("SoegDokument", typeof(SoegInputType1), Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("SoegSag", typeof(SoegInputType2), Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute("SoegSagsloeseDokumenter", typeof(SoegInputType1), Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("SoegDokument", typeof(SoegInputType2), Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("SoegSag", typeof(SoegInputType1), Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("SoegSagsloeseDokumenter", typeof(SoegInputType2), Order=1)]
         [System.Xml.Serialization.XmlElementAttribute("SoegUdtryk", typeof(SoegUdtrykType), Order=1)]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
@@ -3622,7 +3273,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum AndOrType
     {
         
@@ -3638,21 +3289,19 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
-    public partial class SoegInputType1 : SoegIndeksInputType
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
+    public partial class SoegInputType2 : SoegIndeksInputType
     {
         
-        private AttributListeType attributListeField;
+        private AttributListeType1 attributListeField;
         
-        private TilstandListeType tilstandListeField;
+        private TilstandListeType1 tilstandListeField;
         
-        private RelationListeType relationListeField;
-        
-        private VariantListeType variantListeField;
+        private RelationListeType1 relationListeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public AttributListeType AttributListe
+        public AttributListeType1 AttributListe
         {
             get
             {
@@ -3666,7 +3315,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public TilstandListeType TilstandListe
+        public TilstandListeType1 TilstandListe
         {
             get
             {
@@ -3680,7 +3329,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public RelationListeType RelationListe
+        public RelationListeType1 RelationListe
         {
             get
             {
@@ -3689,20 +3338,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             set
             {
                 this.relationListeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public VariantListeType VariantListe
-        {
-            get
-            {
-                return this.variantListeField;
-            }
-            set
-            {
-                this.variantListeField = value;
             }
         }
     }
@@ -3714,7 +3349,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelleoperationer:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:generelleoperationer:6")]
     public partial class SoegIndeksInputType : SoegInputType
     {
         
@@ -4029,19 +3664,19 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
-    public partial class SoegInputType2 : SoegIndeksInputType
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SoegInputType", Namespace="urn:oio:sts:sagdok:sag:6")]
+    public partial class SoegInputType1 : SoegIndeksInputType
     {
         
-        private AttributListeType1 attributListeField;
+        private AttributListeType attributListeField;
         
-        private TilstandListeType1 tilstandListeField;
+        private TilstandListeType tilstandListeField;
         
-        private RelationListeType1 relationListeField;
+        private RelationListeType relationListeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public AttributListeType1 AttributListe
+        public AttributListeType AttributListe
         {
             get
             {
@@ -4055,7 +3690,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public TilstandListeType1 TilstandListe
+        public TilstandListeType TilstandListe
         {
             get
             {
@@ -4069,7 +3704,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public RelationListeType1 RelationListe
+        public RelationListeType RelationListe
         {
             get
             {
@@ -4085,7 +3720,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", IncludeInSchema=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", IncludeInSchema=false)]
     public enum ItemsChoiceType
     {
         
@@ -4108,7 +3743,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum DokumentInkluderFilterType
     {
         
@@ -4119,7 +3754,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public enum SagInkluderFilterType
     {
         
@@ -4131,201 +3766,10 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class FremsoegRequestType
-    {
-        
-        private CallContextType callContextField;
-        
-        private AuthorityContextType authorityContextField;
-        
-        private FremsoegSagDokumentIndeksInputType fremsoegSagDokumentIndeksInputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/CallContext/1/", Order=0)]
-        public CallContextType CallContext
-        {
-            get
-            {
-                return this.callContextField;
-            }
-            set
-            {
-                this.callContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/", Order=1)]
-        public AuthorityContextType AuthorityContext
-        {
-            get
-            {
-                return this.authorityContextField;
-            }
-            set
-            {
-                this.authorityContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=2)]
-        public FremsoegSagDokumentIndeksInputType FremsoegSagDokumentIndeksInput
-        {
-            get
-            {
-                return this.fremsoegSagDokumentIndeksInputField;
-            }
-            set
-            {
-                this.fremsoegSagDokumentIndeksInputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/CallContext/1/")]
-    public partial class CallContextType
-    {
-        
-        private string onBehalfOfUserField;
-        
-        private string callersServiceCallIdentifierField;
-        
-        private string accountingInfoField;
-        
-        /// <remarks/>
-        public string OnBehalfOfUser
-        {
-            get
-            {
-                return this.onBehalfOfUserField;
-            }
-            set
-            {
-                this.onBehalfOfUserField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CallersServiceCallIdentifier
-        {
-            get
-            {
-                return this.callersServiceCallIdentifierField;
-            }
-            set
-            {
-                this.callersServiceCallIdentifierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string AccountingInfo
-        {
-            get
-            {
-                return this.accountingInfoField;
-            }
-            set
-            {
-                this.accountingInfoField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/")]
-    public partial class AuthorityContextType
-    {
-        
-        private string municipalityCVRField;
-        
-        /// <remarks/>
-        public string MunicipalityCVR
-        {
-            get
-            {
-                return this.municipalityCVRField;
-            }
-            set
-            {
-                this.municipalityCVRField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class OpdaterResponseType
-    {
-        
-        private MultipleOutputType opdaterSagDokumentIndeksOutputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=0)]
-        public MultipleOutputType OpdaterSagDokumentIndeksOutput
-        {
-            get
-            {
-                return this.opdaterSagDokumentIndeksOutputField;
-            }
-            set
-            {
-                this.opdaterSagDokumentIndeksOutputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
-    public partial class MultipleOutputType
-    {
-        
-        private StandardReturType[] itemsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("StandardRetur", typeof(StandardReturType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("UnikRetur", typeof(UnikReturType), Order=0)]
-        public StandardReturType[] Items
-        {
-            get
-            {
-                return this.itemsField;
-            }
-            set
-            {
-                this.itemsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RetInputType2))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterSagIndeksInputType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RetInputType1))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterDokumentIndeksInputType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RetInputType1))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterSagIndeksInputType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4368,12 +3812,12 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterSagIndeksInputType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterDokumentIndeksInputType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="urn:oio:sts:sagdok:sag:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:6")]
     public partial class RetInputType2 : RetInputType
     {
         
@@ -4431,8 +3875,8 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
-    public partial class OpdaterSagIndeksInputType : RetInputType2
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
+    public partial class OpdaterDokumentIndeksInputType : RetInputType2
     {
         
         private System.DateTime tidspunktField;
@@ -4453,12 +3897,12 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterDokumentIndeksInputType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpdaterSagIndeksInputType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="urn:oio:sts:sagdok:dokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RetInputType", Namespace="urn:oio:sts:sagdok:sag:6")]
     public partial class RetInputType1 : RetInputType
     {
         
@@ -4467,8 +3911,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         private TilstandListeType tilstandListeField;
         
         private RelationListeType relationListeField;
-        
-        private VariantListeType variantListeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -4511,20 +3953,6 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.relationListeField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public VariantListeType VariantListe
-        {
-            get
-            {
-                return this.variantListeField;
-            }
-            set
-            {
-                this.variantListeField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -4532,11 +3960,15 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
-    public partial class OpdaterDokumentIndeksInputType : RetInputType1
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
+    public partial class OpdaterSagIndeksInputType : RetInputType1
     {
         
         private System.DateTime tidspunktField;
+        
+        private bool udenNotifikationField;
+        
+        private bool udenNotifikationFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -4551,6 +3983,34 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.tidspunktField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool UdenNotifikation
+        {
+            get
+            {
+                return this.udenNotifikationField;
+            }
+            set
+            {
+                this.udenNotifikationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UdenNotifikationSpecified
+        {
+            get
+            {
+                return this.udenNotifikationFieldSpecified;
+            }
+            set
+            {
+                this.udenNotifikationFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -4558,57 +4018,24 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class OpdaterRequestType
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sagdok:3.0.0")]
+    public partial class MultipleOutputType
     {
         
-        private CallContextType callContextField;
-        
-        private AuthorityContextType authorityContextField;
-        
-        private RetInputType[] opdaterSagDokumentIndeksInputField;
+        private StandardReturType[] itemsField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/CallContext/1/", Order=0)]
-        public CallContextType CallContext
+        [System.Xml.Serialization.XmlElementAttribute("StandardRetur", typeof(StandardReturType), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("UnikRetur", typeof(UnikReturType), Order=0)]
+        public StandardReturType[] Items
         {
             get
             {
-                return this.callContextField;
+                return this.itemsField;
             }
             set
             {
-                this.callContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/", Order=1)]
-        public AuthorityContextType AuthorityContext
-        {
-            get
-            {
-                return this.authorityContextField;
-            }
-            set
-            {
-                this.authorityContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("OpdaterDokumentIndeks", typeof(OpdaterDokumentIndeksInputType), IsNullable=false)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("OpdaterSagIndeks", typeof(OpdaterSagIndeksInputType), IsNullable=false)]
-        public RetInputType[] OpdaterSagDokumentIndeksInput
-        {
-            get
-            {
-                return this.opdaterSagDokumentIndeksInputField;
-            }
-            set
-            {
-                this.opdaterSagDokumentIndeksInputField = value;
+                this.itemsField = value;
             }
         }
     }
@@ -4618,119 +4045,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class ImporterResponseType
-    {
-        
-        private MultipleOutputType importerSagDokumentIndeksOutputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=0)]
-        public MultipleOutputType ImporterSagDokumentIndeksOutput
-        {
-            get
-            {
-                return this.importerSagDokumentIndeksOutputField;
-            }
-            set
-            {
-                this.importerSagDokumentIndeksOutputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class ImporterRequestType
-    {
-        
-        private CallContextType callContextField;
-        
-        private AuthorityContextType authorityContextField;
-        
-        private SagDokObjektType[] importerSagDokumentIndeksInputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/CallContext/1/", Order=0)]
-        public CallContextType CallContext
-        {
-            get
-            {
-                return this.callContextField;
-            }
-            set
-            {
-                this.callContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/", Order=1)]
-        public AuthorityContextType AuthorityContext
-        {
-            get
-            {
-                return this.authorityContextField;
-            }
-            set
-            {
-                this.authorityContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("DokumentIndeks", typeof(DokumentIndeksType), IsNullable=false)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("SagIndeks", typeof(SagType), IsNullable=false)]
-        public SagDokObjektType[] ImporterSagDokumentIndeksInput
-        {
-            get
-            {
-                return this.importerSagDokumentIndeksInputField;
-            }
-            set
-            {
-                this.importerSagDokumentIndeksInputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class FjernResponseType
-    {
-        
-        private MultipleOutputType fjernSagDokumentIndeksOutputField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=0)]
-        public MultipleOutputType FjernSagDokumentIndeksOutput
-        {
-            get
-            {
-                return this.fjernSagDokumentIndeksOutputField;
-            }
-            set
-            {
-                this.fjernSagDokumentIndeksOutputField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6")]
     public partial class FjernSagDokumentIndeksInputType
     {
         
@@ -4741,6 +4056,10 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         private bool efterladSagsloeseDokumenterField;
         
         private bool efterladSagsloeseDokumenterFieldSpecified;
+        
+        private bool fjernOgsaaYdelseField;
+        
+        private bool fjernOgsaaYdelseFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SagUuid", Order=0)]
@@ -4797,62 +4116,32 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
                 this.efterladSagsloeseDokumenterFieldSpecified = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/")]
-    public partial class FjernRequestType
-    {
-        
-        private CallContextType callContextField;
-        
-        private AuthorityContextType authorityContextField;
-        
-        private FjernSagDokumentIndeksInputType fjernSagDokumentIndeksInputField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/CallContext/1/", Order=0)]
-        public CallContextType CallContext
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool FjernOgsaaYdelse
         {
             get
             {
-                return this.callContextField;
+                return this.fjernOgsaaYdelseField;
             }
             set
             {
-                this.callContextField = value;
+                this.fjernOgsaaYdelseField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/", Order=1)]
-        public AuthorityContextType AuthorityContext
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FjernOgsaaYdelseSpecified
         {
             get
             {
-                return this.authorityContextField;
+                return this.fjernOgsaaYdelseFieldSpecified;
             }
             set
             {
-                this.authorityContextField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:1.2.4.0", Order=2)]
-        public FjernSagDokumentIndeksInputType FjernSagDokumentIndeksInput
-        {
-            get
-            {
-                return this.fjernSagDokumentIndeksInputField;
-            }
-            set
-            {
-                this.fjernSagDokumentIndeksInputField = value;
+                this.fjernOgsaaYdelseFieldSpecified = value;
             }
         }
     }
@@ -4867,17 +4156,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FjernRequest", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernRequestType FjernRequest1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernSagDokumentIndeksInputType FjernSagDokumentIndeksInput;
         
         public fjernRequest()
         {
         }
         
-        public fjernRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernRequestType FjernRequest1)
+        public fjernRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernSagDokumentIndeksInputType FjernSagDokumentIndeksInput)
         {
             this.RequestHeader = RequestHeader;
-            this.FjernRequest1 = FjernRequest1;
+            this.FjernSagDokumentIndeksInput = FjernSagDokumentIndeksInput;
         }
     }
     
@@ -4891,17 +4180,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FjernResponse", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernResponseType FjernResponse1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType FjernSagDokumentIndeksOutput;
         
         public fjernResponse()
         {
         }
         
-        public fjernResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernResponseType FjernResponse1)
+        public fjernResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType FjernSagDokumentIndeksOutput)
         {
             this.RequestHeader = RequestHeader;
-            this.FjernResponse1 = FjernResponse1;
+            this.FjernSagDokumentIndeksOutput = FjernSagDokumentIndeksOutput;
         }
     }
     
@@ -4915,17 +4204,19 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ImporterRequest", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterRequestType ImporterRequest1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("DokumentIndeks", typeof(DokumentIndeksType), IsNullable=false)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("SagIndeks", typeof(SagType), IsNullable=false)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokObjektType[] ImporterSagDokumentIndeksInput;
         
         public importerRequest()
         {
         }
         
-        public importerRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterRequestType ImporterRequest1)
+        public importerRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokObjektType[] ImporterSagDokumentIndeksInput)
         {
             this.RequestHeader = RequestHeader;
-            this.ImporterRequest1 = ImporterRequest1;
+            this.ImporterSagDokumentIndeksInput = ImporterSagDokumentIndeksInput;
         }
     }
     
@@ -4939,17 +4230,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ImporterResponse", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterResponseType ImporterResponse1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType ImporterSagDokumentIndeksOutput;
         
         public importerResponse()
         {
         }
         
-        public importerResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterResponseType ImporterResponse1)
+        public importerResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType ImporterSagDokumentIndeksOutput)
         {
             this.RequestHeader = RequestHeader;
-            this.ImporterResponse1 = ImporterResponse1;
+            this.ImporterSagDokumentIndeksOutput = ImporterSagDokumentIndeksOutput;
         }
     }
     
@@ -4963,17 +4254,19 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OpdaterRequest", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterRequestType OpdaterRequest1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("OpdaterDokumentIndeks", typeof(OpdaterDokumentIndeksInputType), IsNullable=false)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("OpdaterSagIndeks", typeof(OpdaterSagIndeksInputType), IsNullable=false)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.RetInputType[] OpdaterSagDokumentIndeksInput;
         
         public opdaterRequest()
         {
         }
         
-        public opdaterRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterRequestType OpdaterRequest1)
+        public opdaterRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.RetInputType[] OpdaterSagDokumentIndeksInput)
         {
             this.RequestHeader = RequestHeader;
-            this.OpdaterRequest1 = OpdaterRequest1;
+            this.OpdaterSagDokumentIndeksInput = OpdaterSagDokumentIndeksInput;
         }
     }
     
@@ -4987,17 +4280,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OpdaterResponse", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterResponseType OpdaterResponse1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType OpdaterSagDokumentIndeksOutput;
         
         public opdaterResponse()
         {
         }
         
-        public opdaterResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterResponseType OpdaterResponse1)
+        public opdaterResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType OpdaterSagDokumentIndeksOutput)
         {
             this.RequestHeader = RequestHeader;
-            this.OpdaterResponse1 = OpdaterResponse1;
+            this.OpdaterSagDokumentIndeksOutput = OpdaterSagDokumentIndeksOutput;
         }
     }
     
@@ -5011,17 +4304,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FremsoegRequest", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegRequestType FremsoegRequest1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksInputType FremsoegSagDokumentIndeksInput;
         
         public fremsoegRequest()
         {
         }
         
-        public fremsoegRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegRequestType FremsoegRequest1)
+        public fremsoegRequest(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksInputType FremsoegSagDokumentIndeksInput)
         {
             this.RequestHeader = RequestHeader;
-            this.FremsoegRequest1 = FremsoegRequest1;
+            this.FremsoegSagDokumentIndeksInput = FremsoegSagDokumentIndeksInput;
         }
     }
     
@@ -5035,17 +4328,17 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://kombit.dk/xml/schemas/RequestHeader/1/")]
         public Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FremsoegResponse", Namespace="http://serviceplatformen.dk/xml/wsdl/soap11/SagDokument/SagDokumentIndeks/5/", Order=0)]
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegResponseType FremsoegResponse1;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:oio:sts:sagdok:sagdokumentindeks:6", Order=0)]
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksOutputType FremsoegSagDokumentIndeksOutput;
         
         public fremsoegResponse()
         {
         }
         
-        public fremsoegResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegResponseType FremsoegResponse1)
+        public fremsoegResponse(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksOutputType FremsoegSagDokumentIndeksOutput)
         {
             this.RequestHeader = RequestHeader;
-            this.FremsoegResponse1 = FremsoegResponse1;
+            this.FremsoegSagDokumentIndeksOutput = FremsoegSagDokumentIndeksOutput;
         }
     }
     
@@ -5089,14 +4382,14 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.fjern(request);
         }
         
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernResponseType fjern(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernRequestType FjernRequest1)
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType fjern(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernSagDokumentIndeksInputType FjernSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.FjernRequest1 = FjernRequest1;
+            inValue.FjernSagDokumentIndeksInput = FjernSagDokumentIndeksInput;
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernResponse retVal = ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).fjern(inValue);
             RequestHeader = retVal.RequestHeader;
-            return retVal.FjernResponse1;
+            return retVal.FjernSagDokumentIndeksOutput;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5105,11 +4398,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.fjernAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernResponse> fjernAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernRequestType FjernRequest1)
+        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernResponse> fjernAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FjernSagDokumentIndeksInputType FjernSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.fjernRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.FjernRequest1 = FjernRequest1;
+            inValue.FjernSagDokumentIndeksInput = FjernSagDokumentIndeksInput;
             return ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).fjernAsync(inValue);
         }
         
@@ -5119,14 +4412,14 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.importer(request);
         }
         
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterResponseType importer(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterRequestType ImporterRequest1)
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType importer(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokObjektType[] ImporterSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.ImporterRequest1 = ImporterRequest1;
+            inValue.ImporterSagDokumentIndeksInput = ImporterSagDokumentIndeksInput;
             Kombit.InfrastructureSamples.SagDokumentIndeksService.importerResponse retVal = ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).importer(inValue);
             RequestHeader = retVal.RequestHeader;
-            return retVal.ImporterResponse1;
+            return retVal.ImporterSagDokumentIndeksOutput;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5135,11 +4428,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.importerAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.importerResponse> importerAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.ImporterRequestType ImporterRequest1)
+        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.importerResponse> importerAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokObjektType[] ImporterSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.importerRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.ImporterRequest1 = ImporterRequest1;
+            inValue.ImporterSagDokumentIndeksInput = ImporterSagDokumentIndeksInput;
             return ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).importerAsync(inValue);
         }
         
@@ -5149,14 +4442,14 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.opdater(request);
         }
         
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterResponseType opdater(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterRequestType OpdaterRequest1)
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.MultipleOutputType opdater(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.RetInputType[] OpdaterSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.OpdaterRequest1 = OpdaterRequest1;
+            inValue.OpdaterSagDokumentIndeksInput = OpdaterSagDokumentIndeksInput;
             Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterResponse retVal = ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).opdater(inValue);
             RequestHeader = retVal.RequestHeader;
-            return retVal.OpdaterResponse1;
+            return retVal.OpdaterSagDokumentIndeksOutput;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5165,11 +4458,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.opdaterAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterResponse> opdaterAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.OpdaterRequestType OpdaterRequest1)
+        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterResponse> opdaterAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.RetInputType[] OpdaterSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.opdaterRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.OpdaterRequest1 = OpdaterRequest1;
+            inValue.OpdaterSagDokumentIndeksInput = OpdaterSagDokumentIndeksInput;
             return ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).opdaterAsync(inValue);
         }
         
@@ -5179,14 +4472,14 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.fremsoeg(request);
         }
         
-        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegResponseType fremsoeg(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegRequestType FremsoegRequest1)
+        public Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksOutputType fremsoeg(ref Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksInputType FremsoegSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.FremsoegRequest1 = FremsoegRequest1;
+            inValue.FremsoegSagDokumentIndeksInput = FremsoegSagDokumentIndeksInput;
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegResponse retVal = ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).fremsoeg(inValue);
             RequestHeader = retVal.RequestHeader;
-            return retVal.FremsoegResponse1;
+            return retVal.FremsoegSagDokumentIndeksOutput;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5195,11 +4488,11 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeksService
             return base.Channel.fremsoegAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegResponse> fremsoegAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegRequestType FremsoegRequest1)
+        public System.Threading.Tasks.Task<Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegResponse> fremsoegAsync(Kombit.InfrastructureSamples.SagDokumentIndeksService.RequestHeaderType RequestHeader, Kombit.InfrastructureSamples.SagDokumentIndeksService.FremsoegSagDokumentIndeksInputType FremsoegSagDokumentIndeksInput)
         {
             Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest inValue = new Kombit.InfrastructureSamples.SagDokumentIndeksService.fremsoegRequest();
             inValue.RequestHeader = RequestHeader;
-            inValue.FremsoegRequest1 = FremsoegRequest1;
+            inValue.FremsoegSagDokumentIndeksInput = FremsoegSagDokumentIndeksInput;
             return ((Kombit.InfrastructureSamples.SagDokumentIndeksService.SagDokumentIndeksPortType)(this)).fremsoegAsync(inValue);
         }
     }

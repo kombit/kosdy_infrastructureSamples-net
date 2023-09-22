@@ -71,6 +71,7 @@ namespace Kombit.InfrastructureSamples.Token
 
             rst.Claims.Dialect = "http://docs.oasis-open.org/wsfed/authorization/200706/authclaims";
             rst.Claims.Add(new RequestClaim("dk:gov:saml:attribute:CvrNumberIdentifier", false, cvr));
+            
 
             var client = GenerateStsCertificateClientChannel(clientCertificate);
             return client.Issue(rst);
@@ -93,6 +94,7 @@ namespace Kombit.InfrastructureSamples.Token
             // Should be uncommented if you intent to call DemoService locally.
             // factory.Credentials.ServiceCertificate.Authentication.RevocationMode = X509RevocationMode.NoCheck;
             factory.Endpoint.Contract.ProtectionLevel = ProtectionLevel.Sign;
+
 
             return factory.CreateChannel();
         }

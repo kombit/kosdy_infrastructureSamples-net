@@ -1,6 +1,7 @@
 ﻿using System.ServiceModel.Channels;
 using System.ServiceModel.Security;
 using System.ServiceModel.Security.Tokens;
+using System.Text;
 using Digst.OioIdws.LibBas.StrCustomization;
 
 namespace Digst.OioIdws.LibBas.Bindings
@@ -26,9 +27,9 @@ namespace Digst.OioIdws.LibBas.Bindings
             var transport = new HttpsTransportBindingElement();
             transport.RequireClientCertificate = true;
 
-            var encoding = new TextMessageEncodingBindingElement();
-            // [LIB-BAS] requires SOAP 1.1 and WS-Adressing 1.0
-            encoding.MessageVersion = MessageVersion.Soap11WSAddressing10;
+            var encoding =
+                    new TextMessageEncodingBindingElement(MessageVersion.Soap11WSAddressing10, Encoding.UTF8);
+ 
 
             // AlwaysToInitiator is required by the [LIB-BAS] profile. This specifies that the server certificate must be embedded in the response.
             var recipientTokenParameters = new X509SecurityTokenParameters(
