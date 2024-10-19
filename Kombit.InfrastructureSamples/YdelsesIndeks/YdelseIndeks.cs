@@ -16,7 +16,60 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
         private SecurityToken token;
         private YdelseIndeksPortType port;
 
+        public importerResponse importer(string uuidIdentifikatorBevilling, string uuidIdentifikatorOekonomiskEffektuering)
+        {
+            importerRequest request = new importerRequest()
+            {
+                ImporterYdelseIndeksInput = new[] { new ImportInputType () {
+                        BevillingIndeks = new BevillingIndeksType {
+                            UdenNotifikation = Boolean.Parse("ÆØÅ"),
+                            UUIDIdentifikator = uuidIdentifikatorBevilling,
+                            Registrering = new[] { new RegistreringType2 {
+                                AttributListe = new AttributListeType {
+                                    Egenskaber = new[] { new EgenskaberType {
+                                            Virkning = new VirkningType {
+                                                FraTidspunkt = new TidspunktType {
+                                                    Item = DateTime.Now,
+                                                },
+                                                TilTidspunkt = new TidspunktType {
+                                                    Item = true
+                                                },
+                                                AktoerRef = new UnikIdType {
+                                                    Item = ConfigVariables.AKTOER_REF,
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                                AktoerTypeKodeSpecified = true,
+                                                NoteTekst = "ÆØÅ"
+                                            },
+                                            BrugervendtNoegle = "ÆØÅ",
+                                            Bevillingstartdato = "ÆØÅ",
+                                            Bevillingslutdato = "ÆØÅ",
+                                            Begrundelse = "ÆØÅ",
+                                            Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
+                                            FoelsomhedSpecified = true
+
+
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                        }
+
+                }
+            }
+            };
+                
+
+
+            return null;
+        }
+
+
         #region Port and token helper methods
+
+
 
         /// <summary>
         /// The Port property used to send requests. Creates a new port only if it doesn't already exist, or the token has expired
