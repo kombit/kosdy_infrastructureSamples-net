@@ -82,9 +82,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Token\MutualCertificateWithMessageSecurityBinding.cs" />
     <Compile Include="Token\TokenFetcher.cs" />
+    <Compile Include="YdelsesIndeks\YdelseIndeks.cs" />
+    <Compile Include="YdelsesIndeks\YdelseIndeksService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="YdelsesIndeks\output.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Digst.OioIdws.LibBas\Digst.OioIdws.LibBas.csproj">
