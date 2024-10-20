@@ -20,21 +20,23 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
         {
             importerRequest request = new importerRequest()
             {
-                ImporterYdelseIndeksInput = new[] { new ImportInputType () {
-                        BevillingIndeks = new BevillingIndeksType {
+                ImporterYdelseIndeksInput = new object[] { new ImportInputType() {
+                        BevillingIndeks = new BevillingIndeksType() {
                             UdenNotifikation = Boolean.Parse("ÆØÅ"),
+                            UdenNotifikationSpecified = true,
                             UUIDIdentifikator = uuidIdentifikatorBevilling,
-                            Registrering = new[] { new RegistreringType2 {
-                                AttributListe = new AttributListeType {
-                                    Egenskaber = new[] { new EgenskaberType {
+
+                            Registrering = new[] { new RegistreringType2() {
+                                AttributListe = new AttributListeType() {
+                                    Egenskaber = new[] { new EgenskaberType() {
                                             Virkning = new VirkningType {
-                                                FraTidspunkt = new TidspunktType {
+                                                FraTidspunkt = new TidspunktType() {
                                                     Item = DateTime.Now,
                                                 },
-                                                TilTidspunkt = new TidspunktType {
+                                                TilTidspunkt = new TidspunktType() {
                                                     Item = true
                                                 },
-                                                AktoerRef = new UnikIdType {
+                                                AktoerRef = new UnikIdType() {
                                                     Item = ConfigVariables.AKTOER_REF,
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
@@ -48,15 +50,409 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             Begrundelse = "ÆØÅ",
                                             Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
                                             FoelsomhedSpecified = true
-
+                                    }
+                                    },
+                                    BevilgetYdelse = new[] { new BevilgetYdelseType() {
+                                            Virkning = new VirkningType {
+                                                FraTidspunkt = new TidspunktType() {
+                                                    Item = DateTime.Now,
+                                                },
+                                                TilTidspunkt = new TidspunktType() {
+                                                    Item = true
+                                                },
+                                                AktoerRef = new UnikIdType() {
+                                                    Item = ConfigVariables.AKTOER_REF,
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                                AktoerTypeKodeSpecified = true,
+                                                NoteTekst = "ÆØÅ"
+                                            },
+                                            Id = "ÆØÅ",
+                                            Navn = "ÆØÅ",
+                                            BevilgetYdelseStartdato = DateTime.Now,
+                                            BevilgetYdelseStartdatoSpecified = true,
+                                            BevilgetYdelseSlutdatoSpecified = false,
+                                            Begrundelse = "ÆØÅ",
+                                            Tilbagebetalingspligtig = Boolean.Parse("ÆØÅ"),
+                                            TilbagebetalingspligtigSpecified = true,
+                                            Meddelelse = "ÆØÅ",
+                                            ItSystem = new [] { new ItSystemRelationType() {
+                                                SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
+                                                SystemURI = "ÆØÅ",
+                                                Rolle = new UnikIdType() {
+                                                        Item = ConfigVariables.MASTER_UUID, // Constant for Master
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                Type = new UnikIdType() {
+                                                    Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                Indeks = "ÆØÅ",
+                                                ReferenceID = new UnikIdType() {
+                                                    Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                                   Any = new [] { 
+                                                       (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                   },
+                                                   SenestAendretTidspunkt = DateTime.Now,
+                                                   SenestAendretTidspunktSpecified = true
+                                                }
+                                            }
+                                            },
+                                            Ydelse = new YdelseRelationType() {
+                                                Ydelsesnavn = "ÆØÅ",
+                                                Klassifikation = new BevillingsklasseRelationType() {
+                                                    BrugervendtNoegle = "ÆØÅ",
+                                                    Klassetitel = "ÆØÅ",
+                                                    Rolle = new UnikIdType() {
+                                                        Item = "ÆØÅ", // Constant for Master
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                    },
+                                                    Type = new UnikIdType() {
+                                                        Item = "ÆØÅ", // Constant for IT-system
+                                                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                    },
+                                                    Indeks = "ÆØÅ",
+                                                    ReferenceID = new UnikIdType() {
+                                                        Item = "ÆØÅ", // The UUID of your IT-system
+                                                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                    },
+                                                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                                       Any = new [] {
+                                                           (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                       },
+                                                       SenestAendretTidspunkt = DateTime.Now,
+                                                       SenestAendretTidspunktSpecified = true
+                                                    }
+                                                },
+                                                 Rolle = new UnikIdType() {
+                                                        Item = "ÆØÅ", // Constant for Master
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                Type = new UnikIdType() {
+                                                    Item = "ÆØÅ", // Constant for IT-system
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                Indeks = "ÆØÅ",
+                                                ReferenceID = new UnikIdType() {
+                                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                                   Any = new [] {
+                                                       (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                   },
+                                                   SenestAendretTidspunkt = DateTime.Now,
+                                                   SenestAendretTidspunktSpecified = true
+                                                }
+                                            },
+                                            Items = new [] { new OekonomiskEffektueringsplanType() {
+                                                Id = "ÆØÅ",
+                                                EffektueringsplanStartdato = DateTime.Now,
+                                                EffektueringsplanSlutdatoSpecified = false,
+                                                Beregningsfrekvens = "ÆØÅ",
+                                                ForudBagud = OekonomiskEffektueringsplanTypeForudBagud.Forud,
+                                                Dispositionsdag = "ÆØÅ",
+                                                Ydelsesbeloeb = "ÆØÅ",
+                                                ManueltGodkendes = Boolean.Parse("ÆØÅ"),
+                                                ForudBagudSpecified = true,
+                                                ManueltGodkendesSpecified = true
+                                            }
+                                            }
+                                            
+                                    }
 
                                     }
+                                },
+                                TilstandListe = new TilstandListeType() {
+                                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                        Any = new [] {
+                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        },
+                                        SenestAendretTidspunkt = DateTime.Now,
+                                        SenestAendretTidspunktSpecified = true
+                                    }
+                                },
+                                RelationListe = new RelationListeType() {
+                                    Bevillingssag = new[] {
+                                        new BevillingIndeksSagRelationType() {
+                                            BrugervendtNoegle = "ÆØÅ",
+                                            FuldtNavn = "ÆØÅ",
+                                            Virkning = new VirkningType {
+                                                FraTidspunkt = new TidspunktType() {
+                                                    Item = DateTime.Now,
+                                                },
+                                                TilTidspunkt = new TidspunktType() {
+                                                    Item = true
+                                                },
+                                                AktoerRef = new UnikIdType() {
+                                                    Item = ConfigVariables.AKTOER_REF,
+                                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                                },
+                                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                                AktoerTypeKodeSpecified = true,
+                                                NoteTekst = "ÆØÅ"
+                                            },
+                                            Rolle = new UnikIdType() {
+                                                Item = "ÆØÅ", // Constant for Master
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            Type = new UnikIdType() {
+                                                Item = "ÆØÅ", // Constant for IT-system
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            Indeks = "ÆØÅ",
+                                            ReferenceID = new UnikIdType() {
+                                                Item = "ÆØÅ", // The UUID of your IT-system
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                                Any = new [] {
+                                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                },
+                                                SenestAendretTidspunkt = DateTime.Now,
+                                                SenestAendretTidspunktSpecified = true
+                                            }
+                                        }
+                                    },
+                                    Bevillingspart = new[] { new BevillingIndeksPartRelationType() {
+                                        BrugervendtNoegle = "ÆØÅ",
+                                        FuldtNavn = "ÆØÅ",
+                                        Virkning = new VirkningType {
+                                            FraTidspunkt = new TidspunktType() {
+                                                Item = DateTime.Now,
+                                            },
+                                            TilTidspunkt = new TidspunktType() {
+                                                Item = true
+                                            },
+                                            AktoerRef = new UnikIdType() {
+                                                Item = ConfigVariables.AKTOER_REF,
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                            AktoerTypeKodeSpecified = true,
+                                            NoteTekst = "ÆØÅ"
+                                        },
+                                        Rolle = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for Master
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Type = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Indeks = "ÆØÅ",
+                                        ReferenceID = new UnikIdType() {
+                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                            Any = new [] {
+                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            },
+                                            SenestAendretTidspunkt = DateTime.Now,
+                                            SenestAendretTidspunktSpecified = true
+                                        }
+                                    }
+                                    },
+                                    Bevillingsaktoer = new[] { new BevillingIndeksAktoerRelationType() {
+                                        BrugervendtNoegle = "ÆØÅ",
+                                        FuldtNavn = "ÆØÅ",
+                                        CVRnr = "ÆØÅ",
+                                        Virkning = new VirkningType {
+                                            FraTidspunkt = new TidspunktType() {
+                                                Item = DateTime.Now,
+                                            },
+                                            TilTidspunkt = new TidspunktType() {
+                                                Item = true
+                                            },
+                                            AktoerRef = new UnikIdType() {
+                                                Item = ConfigVariables.AKTOER_REF,
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                            AktoerTypeKodeSpecified = true,
+                                            NoteTekst = "ÆØÅ"
+                                        },
+                                        Rolle = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for Master
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Type = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Indeks = "ÆØÅ",
+                                        ReferenceID = new UnikIdType() {
+                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                            Any = new [] {
+                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            },
+                                            SenestAendretTidspunkt = DateTime.Now,
+                                            SenestAendretTidspunktSpecified = true
+                                        }
+                                    }
+                                    },
+                                    Sikkerhedsprofil = new[] { new SikkerhedsprofilRelationType() {
+                                        Virkning = new VirkningType {
+                                            FraTidspunkt = new TidspunktType() {
+                                                Item = DateTime.Now,
+                                            },
+                                            TilTidspunkt = new TidspunktType() {
+                                                Item = true
+                                            },
+                                            AktoerRef = new UnikIdType() {
+                                                Item = ConfigVariables.AKTOER_REF,
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                            AktoerTypeKodeSpecified = true,
+                                            NoteTekst = "ÆØÅ"
+                                        },
+                                        Rolle = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for Master
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Type = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Indeks = "ÆØÅ",
+                                        ReferenceID = new UnikIdType() {
+                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                            Any = new [] {
+                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            },
+                                            SenestAendretTidspunkt = DateTime.Now,
+                                            SenestAendretTidspunktSpecified = true
+                                        }
+                                    }
+                                    }
+                                },
+                                NoteTekst = "ÆØÅ",
+                                Tidspunkt = DateTime.Now,
+                                TidspunktSpecified = true,
+                                BrugerRef = new UnikIdType() {
+                                    Item = "ÆØÅ", 
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                LivscyklusKode = LivscyklusKodeType.Importeret,
+                                LivscyklusKodeSpecified = true,
+                                StsTidspunkt = DateTime.Now,
+                                StsTidspunktSpecified = true,
+                            }
+                            },
+                            
+                        }
+                        
+
+                }, new ImportInputType1() {
+                    OekonomiskEffektueringIndeks = new OekonomiskEffektueringIndeksType() {
+                        UUIDIdentifikator = uuidIdentifikatorOekonomiskEffektuering,
+                        Registrering = new [] {
+                            new RegistreringType3()
+                            {
+                                AttributListe = new AttributListeType1() {
+                                    Egenskaber = new[] { new EgenskaberType1()  {
+                                        Virkning = new VirkningType {
+                                            FraTidspunkt = new TidspunktType() {
+                                                Item = DateTime.Now,
+                                            },
+                                            TilTidspunkt = new TidspunktType() {
+                                                Item = true
+                                            },
+                                            AktoerRef = new UnikIdType() {
+                                                Item = ConfigVariables.AKTOER_REF,
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                            AktoerTypeKodeSpecified = true,
+                                            NoteTekst = "ÆØÅ"
+                                        },
+                                        BrugervendtNoegle = "ÆØÅ",
+                                        Startdato = DateTime.Now,
+                                        StartdatoSpecified = true,
+                                        SlutdatoSpecified = false,
+                                        SamletBruttobeloeb = "ÆØÅ",
+                                        Dispositionsdato = DateTime.Now,
+                                        DispositionsdatoSpecified = true,
+                                        BeloebEfterSkatATP = "ÆØÅ",
+                                        BeloebSendtTilUdbetaling = "ÆØÅ",
+                                        BeloebUdbetalt = "ÆØÅ",
+                                        Udbetalingsafdeling = "ÆØÅ",
+                                        SendtTilUdbetalingTekst = "ÆØÅ",
+                                        UdbetaltTekst = "ÆØÅ"
+                                    }
+                                    },
+                                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                        Any = new [] {
+                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        },
+                                        SenestAendretTidspunkt = DateTime.Now,
+                                        SenestAendretTidspunktSpecified = true
+                                    }
+                                },
+                                TilstandListe = new TilstandListeType1() {
+                                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                        Any = new [] {
+                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        }
+                                    }
+                                },
+                                RelationListe = new RelationListeType1() {
+                                    OekonomiskYdelseEffektueringRelation = new[] {
+                                        new OekonomiskYdelseEffektueringRelationType() {
+                                            Virkning = new VirkningType {
+                                            FraTidspunkt = new TidspunktType() {
+                                                Item = DateTime.Now,
+                                            },
+                                            TilTidspunkt = new TidspunktType() {
+                                                Item = true
+                                            },
+                                            AktoerRef = new UnikIdType() {
+                                                Item = ConfigVariables.AKTOER_REF,
+                                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                            },
+                                            AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                            AktoerTypeKodeSpecified = true,
+                                            NoteTekst = "ÆØÅ"
+                                        },
+                                        Rolle = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for Master
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Type = new UnikIdType() {
+                                            Item = "ÆØÅ", // Constant for IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        Indeks = "ÆØÅ",
+                                        ReferenceID = new UnikIdType() {
+                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                        },
+                                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                            Any = new [] {
+                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            },
+                                            SenestAendretTidspunkt = DateTime.Now,
+                                            SenestAendretTidspunktSpecified = true
+                                        },
+                                        
+                                        }
                                     }
                                 }
                             }
-                            }
                         }
-
+                    }
                 }
             }
             };
