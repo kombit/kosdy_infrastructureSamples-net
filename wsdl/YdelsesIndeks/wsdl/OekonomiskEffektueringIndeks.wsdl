@@ -13,17 +13,17 @@
   >
 
   <wsdl:import namespace="http://serviceplatformen.dk/xml/wsdl/soap11/Security/Policy"
-               location="../xsd/policies/OIOIDWS.wsdl"/>
+               location="xsd/policies/OIOIDWS.wsdl"/>
 
   <wsdl:types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-		<xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="../xsd/6.0.STS-0/OekonomiskEffektueringIndeksOperationer.xsd"/>
-        <xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="../xsd/6.0.STS-0/OekonomiskEffektueringIndeksBesked.xsd"/>
-        <xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="../xsd/6.0.STS-0/OekonomiskEffektueringIndeks.xsd"/>
-        <xsd:import namespace="urn:oio:sts:generelledefinitioner:6" schemaLocation="../xsd/6.0.STS-0/GenerelleDefinitioner.xsd"/>
-        <xsd:import namespace="urn:oio:sts:generelleoperationer:6" schemaLocation="../xsd/6.0.STS-0/GenerelleOperationer.xsd"/>
-        <xsd:import namespace="urn:oio:sagdok:3.0.0" schemaLocation="../xsd/common/SagDokObjekt.xsd"/>
-        <xsd:import namespace="http://kombit.dk/xml/schemas/RequestHeader/1/" schemaLocation="../xsd/common/RequestHeader.xsd" />
+		<xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="xsd/6.0.STS-0/OekonomiskEffektueringIndeksOperationer.xsd"/>
+        <xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="xsd/6.0.STS-0/OekonomiskEffektueringIndeksBesked.xsd"/>
+        <xsd:import namespace="urn:oio:sts:ydelse:oekonomiskeffektueringindeks:6" schemaLocation="xsd/6.0.STS-0/OekonomiskEffektueringIndeks.xsd"/>
+        <xsd:import namespace="urn:oio:sts:generelledefinitioner:6" schemaLocation="xsd/6.0.STS-0/GenerelleDefinitioner.xsd"/>
+        <xsd:import namespace="urn:oio:sts:generelleoperationer:6" schemaLocation="xsd/6.0.STS-0/GenerelleOperationer.xsd"/>
+        <xsd:import namespace="urn:oio:sagdok:3.0.0" schemaLocation="xsd/common/SagDokObjekt.xsd"/>
+        <xsd:import namespace="http://kombit.dk/xml/schemas/RequestHeader/1/" schemaLocation="xsd/common/RequestHeader.xsd" />
       </xsd:schema>
   </wsdl:types>
   <wsdl:message name="OekonomiskEffektueringOpretResponseMessage">
