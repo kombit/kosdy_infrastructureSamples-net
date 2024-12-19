@@ -22,7 +22,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
             {
                 ImporterYdelseIndeksInput = new object[] { new ImportInputType() {
                         BevillingIndeks = new BevillingIndeksType() {
-                            UdenNotifikation = Boolean.Parse("ÆØÅ"),
+                            UdenNotifikation = Boolean.Parse(ConfigVariables.),
                             UdenNotifikationSpecified = true,
                             UUIDIdentifikator = uuidIdentifikatorBevilling,
 
