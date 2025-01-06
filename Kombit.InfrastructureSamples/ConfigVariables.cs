@@ -8,13 +8,13 @@ namespace Kombit.InfrastructureSamples {
 
 
         // Your Client Certificate (funktionscertifikat) 
-        public const string ClientCertificateThumbprint = "df1d9fc3c4021f3436bcf055d067c9c4bf916eeb"; // Insert your Client Certificate Thumbprint here, e.g. 3d69ddd9ec9bc99046f5b3637a9d7213385d9fbf
+        public const string ClientCertificateThumbprint = "876c62af6db2684c49dd8c6b4d40207625f79313"; // Insert your Client Certificate Thumbprint here, e.g. 3d69ddd9ec9bc99046f5b3637a9d7213385d9fbf
         public const StoreLocation ClientCertificateStoreLocation = StoreLocation.CurrentUser; // Change if the certificate is stored in another location
         public const StoreName ClientCertificateStoreName = StoreName.My; // Change if the certificate is stored in another location
 
         // UUID and name of your it-system in Fælleskommunalt Administrationssystem
-        public const string ANVENDER_SYSTEM_UUID = "ba537e12-8b0c-44b1-9de7-f75803a4e091"; // Change to the UUID of your system
-        public const string ANVENDER_SYSTEM_NAVN = "STS testklient 29"; // Change to the name of your system
+        public const string ANVENDER_SYSTEM_UUID = "aa165144-952f-434e-b3b0-2d466673ed9c"; // Change to the UUID of your system
+        public const string ANVENDER_SYSTEM_NAVN = "FKI-KOMBIT Test med Silverbullet"; // Change to the name of your system
 
         // CVR and name of the municipality (myndighed) that will be used to test 
         public const string MYNDIGHEDS_CVR = "11111111"; // Change to your authority CVR
@@ -36,6 +36,9 @@ namespace Kombit.InfrastructureSamples {
 
         // The alias for the certificate to validate responses from Klassifikation. The thumbprint and location is set in app.config.
         public const string ServiceCertificateAlias_KLA = "KLA_EXTTEST_Klassifikation_1";
+
+        // The alias for the certificate to validate responses from Klassifikation. The thumbprint and location is set in app.config.
+        public const string ServiceCertificateAlias_YDI = "YDI_EXTTEST_Ydelsesindeks_1";
 
         // The alias and thumbprint for the certificate to trust the STS.
         // Change only needed if you don't use the external test server for tokens.
@@ -61,6 +64,9 @@ namespace Kombit.InfrastructureSamples {
 
         // Entity ID for Organisation 6
         public const string OrgService6EntityId = "http://stoettesystemerne.dk/service/organisation/3";
+
+        // Entity ID for Ydelse 6
+        public const string YdelseService6EntityId = "http://entityid.kombit.dk/service/ydi/ydelseindeks/6";
 
         #endregion
 
@@ -134,6 +140,39 @@ namespace Kombit.InfrastructureSamples {
 
         // The sender IT-sytem (IT-system Afsender) 
         public const string AFSENDER_TYPE_UUID = "1b3c6a6d-e977-4491-9bf8-b41ee6999f39"; // Rolle = Afsender
+
+        #endregion
+
+        #region Variables for YdelsesIndeks - to be revised by KOMBIT
+
+        public const string BEVILLING_UUID_IDENTIFIKATOR = "2222aaaa-22aa-33bb-44cc-222222aaaaaa"; // bevillingUUIDIdentifikator
+        public const string BEVILLINGS_EGENSKABER_VIRKNING_FRA = "2024-01-01T14:54:23.234+01.00"; // bevillingsegenskaberVirkningFra
+        public const string BEVILLINGS_EGENSKABER_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingsegenskaberAktoerRef
+        public const string BEVILLINGS_EGENSKABER_AKTOER_TYPE_KODE = "Bruger"; // bevillingsegenskaberAktoerTypeKode
+        public const string BEVILLINGS_EGENSKABER_BRUGERVENDT_NOEGLE = "2020-123456789"; // bevillingsegenskaberBrugervendtnoegle
+        public const string BEVILLINGS_EGENSKABER_FOELSOMHED = "FORTROLIGE_PERSONOPLYSNINGER"; // bevillingsegenskaberFoelsomhed
+        public const string BEVILGET_YDELSE_VIRKNING_FRA = "2024-01-01T14:54:23.234+01.00"; // bevilgetYdelseVirkningFra
+        public const string BEVILGET_YDELSE_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevilgetYdelseAktoerRef
+        public const string BEVILGET_YDELSE_AKTOER_TYPE_KODE = "Bruger"; // bevilgetYdelseAktoerTypeKode
+        public const string BEVILGET_YDELSE_ID = "1"; // bevilgetYdelseID
+        public const string BEVILGET_YDELSE_NAVN = "Folkepension"; // bevilgetYdelseNavn
+        public const string BEVILGET_YDELSE_STARTDATO = "2024-01-01T14:54:23.234+01.00"; // bevilgetYdelseStardato
+        public const string BEVILGET_YDELSE_SLUTDATO = "ÆØÅ" // bevilgetYdelseSlutdato
+        public const string YDELSE_YDELSES_NAVN = "Grundbeløb - FOP"; // ydelseYdelsesnavn
+        public const string BEVILLING_PRIMAER_KLASSE_BRUGERVENDT_NOEGLE = "32.03.04"; // bevillingPrimaerKlasseBrugervendtNoegle
+        public const string BEVILLING_PRIMAER_KLASSE_KlASSETITEL = "Folkepension"; // bevillingPrimaerKlasseKlassetitel
+        public const string BEVILLING_PRIMAER_KLASSE_ROlLE_UUID = "ea909030-c5fa-4544-9b22-a0010d08ebe1"; // bevillingPrimaerKlasseRolleUuid
+        public const string BEVILLING_KLASSE_TYPE_UUID = "7c51b9a8-d388-4e83-8c8b-ee3a90458d0b"; // bevillingKlasseTypeUuid
+        public const string BEVILLING_PRIMAER_KLASSE_INDEKS = "1"; // bevillingPrimaerKlasseIndeks
+        public const string BEVILLING_PRIMAER_KLASSE_REFERENCE_ID = "70355b26-6028-4e42-9eb1-1a93aa9890b1"; // bevillingPrimaerKlasseReferenceId
+        public const string BEVILLINGS_SAG_BRUGERVENDT_NOEGLE = "2020-123456789"; // bevillingssagBrugervendtNoegle
+        public const string BEVILLINGS_SAG_FULDT_NAVN = "Folkepension"; // bevillingssagFuldtNavn
+        public const string BEVILLINGS_SAG_STARTDATO = "ÆØÅ"; // bevillingssagStartdato
+        public const string BEVILLING_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingAktoerRef
+        public const string BEVILLINGS_SAG_ROLLE_UUID = "31237487-787a-424f-8819-56aaedf00643"; // bevillingssagRolleUuid
+        public const string BEVILLINGS_SAG_TYPE_UUID = "f08a4a13-2567-41d0-bf8d-3af754b03464"; // bevillingssagTypeUuid
+        public const string BEVILLINGS_PART_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingspartBrugervendtNoegle
+        YDELSESMODTAGER_FULDT_NAVN
 
         #endregion
     }
