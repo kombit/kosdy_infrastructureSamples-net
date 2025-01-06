@@ -172,7 +172,27 @@ namespace Kombit.InfrastructureSamples {
         public const string BEVILLINGS_SAG_ROLLE_UUID = "31237487-787a-424f-8819-56aaedf00643"; // bevillingssagRolleUuid
         public const string BEVILLINGS_SAG_TYPE_UUID = "f08a4a13-2567-41d0-bf8d-3af754b03464"; // bevillingssagTypeUuid
         public const string BEVILLINGS_PART_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingspartBrugervendtNoegle
-        YDELSESMODTAGER_FULDT_NAVN
+        public const string YDELSESMODTAGER_FULDT_NAVN = "Lonnie Pedersen"; // ydelsesmodtagerFuldtNavn
+        public const string BEVILLINGS_PART_STARTDATO = "ÆØÅ"; // bevillingspartStartdato
+        public const string BEVILLING_YDELSESMODTAGER_ROLLE_UUID = "93af57a7-7658-4fac-98da-9e5ac7a7d9a5"; // bevillingYdelsesmodtagerRolleUuid
+        public const string BEVILLING_YDELSESMODTAGER_TYPE_UUID = "c59f1523-1786-48c7-baff-466de1db3320"; // bevillingYdelsesmodtagerTypeUuid
+        public const string YDELSESMODTAGER_INDEKS = "1"; // ydelsesmodtagerIndeks
+        public const string YDELSESMODTAGER_REFERENCE_ID = "urn:oio:cpr-nr:0123456789"; // ydelsesmodtagerReferenceId
+        public const string BEVILLING_EJER_FULDT_NAVN = "Korsbaek Kommune"; // bevillingEjerFuldtNavn
+        public const string BEVILLING_EJER_CVR_NR = "11111111"; // bevillingEjerCvrNr
+        public const string BEVILLING_EJER_STARTDATO = "ÆØÅ"; // bevillingEjerStartdato
+        public const string BEVILLING_EJER_SLUTDATO = "ÆØÅ"; // bevillingEjerSlutdato
+        public const string BEVILLING_EJER_ROLLE_ID = "abdf4d3e-f113-4282-b13e-6cd32a82621c"; // bevillingEjerRolleUuid
+        public const string BEVILLING_EJER_TYPE_UUID = "45b7dafb-d90e-41da-b30e-ba007e577a8a"; // bevillingEjerTypeUuid
+        public const string BEVILLING_EJER_REFERENCE_ID = "ÆØÅ"; // bevillingEjerReferenceId
+        public const string BEVILLING_ANSVARLIG_FULDT_NAVN = "Korsbaek Kommune"; // bevillingAnsvarligFuldtNavn
+        public const string BEVILLING_ANSVARLIG_CVR_NR = "11111111"; // bevillingAnsvarligCvrNr
+        public const string BEVILLING_ANSVARLIG_STARTDATO = "ÆØÅ"; // bevillingAnsvarligStartdato
+        public const string BEVILLING_ANSVARLIG_ROLLE_UUID = "fbe1016a-170a-4dea-8652-2813c1a566c0"; // bevillingAnsvarligRolleUuid
+        public const string BEVILLING_ANSVARLIG_TYPE_UUID = "4546cca2-838e-4e0d-a5bd-83757d603362"; // bevillingAnsvarligTypeUuid
+        public const string BEVILLING_ANSVARLIG_INDEKS = "ÆØÅ"; // bevillingAnsvarligIndeks
+        public const string BEVILLING_ANSVARLIG_REFERENCE_ID = "0235dc7b-11c4-4ee5-b685-9f638f5cd032"; // bevillingAnsvarligReferenceId
+        public const string BEVILLING_LIVSCYKLUS_KODE = "Importeret"; // bevillingLivscykluskode
 
         #endregion
     }
