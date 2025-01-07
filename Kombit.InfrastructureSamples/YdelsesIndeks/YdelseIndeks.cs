@@ -11,7 +11,7 @@ using System.IdentityModel.Tokens;
 
 namespace Kombit.InfrastructureSamples.YdelsesIndeks
 {
-    internal class YdelseIndeks
+    public class YdelseIndeks
     {
         private SecurityToken token;
         private YdelseIndeksPortType port;
@@ -1210,6 +1210,21 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
             return Port.opdater(request);
         }
 
+        public fremsoegResponse fremsoegSimple(string uuidBevilling, string uuidOekonomiskEffektuering)
+        {
+            fremsoegRequest request = new fremsoegRequest()
+            {
+                FremsoegYdelseIndeksInput = new FremsoegYdelseIndeksInputType()
+                {
+                    BevillingUuid = new[] { uuidBevilling },
+                    OekonomiskEffektueringUuid = new[] { uuidOekonomiskEffektuering }
+                },
+                RequestHeader = RequestHeader
+            };
+
+            return Port.fremsoeg(request);
+        }
+
         public fremsoegResponse fremsoeg(string uuidBevilling, string uuidOekonomiskEffektuering)
         {
             fremsoegRequest request = new fremsoegRequest() {
@@ -1928,11 +1943,10 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
         /// <returns></returns>
         private YdelseIndeksPortType CreatePort()
         {
-            //TODO Changeg ConfigVariables.SagDokServiceEntityId to ConfigVariables.YdelseServiceEntityId
-            token = TokenFetcher.IssueToken(ConfigVariables.SagDokServiceEntityId);
+            token = TokenFetcher.IssueToken(ConfigVariables.YdelseService6EntityId);
             YdelseIndeksPortTypeClient client = new YdelseIndeksPortTypeClient();
 
-            EndpointIdentity identity = EndpointIdentity.CreateDnsIdentity(ConfigVariables.ServiceCertificateAlias);
+            EndpointIdentity identity = EndpointIdentity.CreateDnsIdentity(ConfigVariables.ServiceCertificateAlias_YDI);
             EndpointAddress endpointAddress = new EndpointAddress(client.Endpoint.ListenUri, identity);
             client.Endpoint.Address = endpointAddress;
             var certificate = CertificateLoader.LoadCertificate(

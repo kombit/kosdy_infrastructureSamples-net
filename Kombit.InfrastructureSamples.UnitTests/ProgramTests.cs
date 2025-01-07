@@ -20,7 +20,7 @@ namespace Kombit.InfrastructureSamples.UnitTests
         public void TestInitialize()
         {
             var sagdokumentIndeks = new SagDokumentIndeks.SagDokumentIndeks();
-            sagdokumentIndeks.Fjern(ConfigVariables.UUID);
+            //sagdokumentIndeks.Fjern(ConfigVariables.UUID);
         }            
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace Kombit.InfrastructureSamples.UnitTests
             fremsoegResponse fremsoegResponse = sagdokumentIndeks.Fremsoeg(ConfigVariables.UUID);
             fjernResponse fjernResponse = sagdokumentIndeks.Fjern(ConfigVariables.UUID);
             //Assert
-            Assert.AreEqual(importerResponse.ImporterResponse1.ImporterSagDokumentIndeksOutput.Items[0].StatusKode, "20");
-            Assert.AreEqual(fremsoegResponse.FremsoegResponse1.FremsoegSagDokumentIndeksOutput.StandardRetur.StatusKode, "20");
-            Assert.AreEqual(fjernResponse.FjernResponse1.FjernSagDokumentIndeksOutput.Items[0].StatusKode, "20");
+            Assert.AreEqual(importerResponse.ImporterSagDokumentIndeksOutput.Items[0].StatusKode, "20");
+            Assert.AreEqual(fremsoegResponse.FremsoegSagDokumentIndeksOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fjernResponse.FjernSagDokumentIndeksOutput.Items[0].StatusKode, "20");
 
         }
 
@@ -75,6 +75,21 @@ namespace Kombit.InfrastructureSamples.UnitTests
             //Assert
             Assert.AreEqual(soegOutputKLE_KLASSE.StandardRetur.StatusKode, "20");
             Assert.AreEqual(soegOutput_KLE_HANDLINGSFACET.StandardRetur.StatusKode, "20");
+        }
+
+        /// <summary>
+        /// Test method for SagdokumentIndeks
+        /// The test ensures that scenarios 1-4 returns Statuskode 20 which equals OK. 
+        /// </summary>
+        [TestMethod]
+        public void FremsoegYdelse_ShouldPassWithCode20()
+        {
+            //Arrange
+            var ydelseIndeks = new YdelsesIndeks.YdelseIndeks();
+            //Act 
+            Kombit.InfrastructureSamples.YdelseIndeksService.fremsoegResponse fremsoegResponse = ydelseIndeks.fremsoegSimple("ÆØÅ", "ÆØÅ");
+            //Assert
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.StatusKode, "20");
         }
     }
 }
