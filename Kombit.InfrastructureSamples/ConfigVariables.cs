@@ -193,6 +193,47 @@ namespace Kombit.InfrastructureSamples {
         public const string BEVILLING_ANSVARLIG_INDEKS = "ÆØÅ"; // bevillingAnsvarligIndeks
         public const string BEVILLING_ANSVARLIG_REFERENCE_ID = "0235dc7b-11c4-4ee5-b685-9f638f5cd032"; // bevillingAnsvarligReferenceId
         public const string BEVILLING_LIVSCYKLUS_KODE = "Importeret"; // bevillingLivscykluskode
+        public const string EFFEKTUERING_UUID_IDENTIFIKATOR = "ÆØÅ"; // effektueringUUIDIdentifikator
+        public const string EFFEKTUERING_EGENSKABER_VIRKNING_FRA = "ÆØÅ"; // effektueringEgenskaberVirkningFra
+        public const string EFFEKTUERING_EGENSKABER_AKTOER_REF = "ÆØÅ"; // effektueringEgenskaberAktoerRef
+        public const string EFFEKTUERING_EGENSKABER_BRUGERVENDT_NOEGLE = "ÆØÅ"; // effektueringEgenskaberBrugervendtNoegle
+        public const string EFFEKTUERING_EGENSKABER_STARTDATO = "ÆØÅ"; // effektueringEgenskaberStartdato
+        public const string EFFEKTUERING_EGENSKABER_SLUTDATO = "ÆØÅ"; // effektueringEgenskaberSlutdato
+        public const string EFFEKTUERING_EGENSKABER_SAMLET_BRUTTOBELOEB = "ÆØÅ"; // effektueringEgenskaberSamletBruttobeloeb
+        public const string EFFEKTUERING_EGENSKABER_DISPOSITIONSDATO = "ÆØÅ"; // effektueringEgenskaberDispositionsdato
+        public const string EFFEKTUERING_EGENSKABER_BELOEB_EFTER_SKAT_ATP = "ÆØÅ"; // effektueringEgenskaberBeloebEfterSkatATP
+        public const string EFFEKTUERING_EGENSKABER_BELOEB_SENDT_TIL_UDBETALING = "ÆØÅ"; // effektueringEgenskaberBeloebSendtTilUdbetaling
+        public const string EFFEKTUERING_EGENSKABER_UDBETALINGSAFDELING = "ÆØÅ"; // effektueringEgenskaberUdbetalingsafdeling
+        public const string YDELSEEFFEKTUERING_VIRKNING_FRA = "ÆØÅ"; // ydelseseffektueringVirkningFra
+        public const string YDELSEEFFEKTUERING_AKTOER_REF = "ÆØÅ"; // ydelseseffektueringAktoerRef
+        public const string YDELSEEFFEKTUERING_ROLLE_UUID = "ÆØÅ"; // ydelseseffektueringRolleUuid
+        public const string YDELSEEFFEKTUERING_TYPE_UUID = "ÆØÅ"; // ydelseseffektueringTypeUuid
+        public const string YDELSEEFFEKTUERING_INDEKS = "ÆØÅ"; // ydelseseffektueringIndeks
+        public const string YDELSEEFFEKTUERING_REFERENCE_ID = "ÆØÅ"; // ydelseseffektueringReferenceId
+        public const string YDELSEEFFEKTUERING_YDELSESPERIODE_STARTDATO = "ÆØÅ"; // ydelseseffektueringYdelsesperiodeStartdato
+        public const string YDELSEEFFEKTUERING_YDELSESPERIODE_SLUTDATO = "ÆØÅ"; // ydelseseffektueringYdelsesperiodeSlutdato
+        public const string YDELSEEFFEKTUERING_YDELSESBELOEB = "ÆØÅ"; // ydelseseffektueringYdelsesbeloeb
+        public const string YDELSEEFFEKTUERING_KLASSIFIKATIONSBESKRIVELSE = "ÆØÅ"; // ydelseseffektueringKlassifikationsbeskrivelse
+        public const string YDELSEEFFEKTUERING_BEVILGET_YDELSE_REF_UUID_IDENTIFIKATOR = "ÆØÅ"; // ydelseseffektueringBevilgetYdelseRefUUIDIdentifikator
+        public const string YDELSEEFFEKTUERING_BEVILGET_YDELSE_REF_BEVILGET_YDELSE_ID = "ÆØÅ"; // ydelseseffektueringBevilgetYdelseRefBevilgetYdelseId
+        public const string EFFEKTUERING_EJER_FULDT_NAVN = "ÆØÅ"; // effektueringEjerFuldtNavn
+        public const string EFFEKTUERING_EJER_CVR_NR = "ÆØÅ"; // effektueringEjerCVRNr
+        public const string EFFEKTUERING_EJER_VIRKNING_FRA = "ÆØÅ"; // effektueringEjerVirkningFra
+        public const string EFFEKTUERING_EJER_AKTOER_REF = "ÆØÅ"; // effektueringEjerAktoerRef
+        public const string EFFEKTUERING_EJER_ROLLE_UUID = "ÆØÅ"; // effektueringEjerRolleUuid
+        public const string EFFEKTUERING_EJER_TYPE_UUID = "ÆØÅ"; // effektueringEjerTypeUuid
+        public const string EFFEKTUERING_EJER_REFERENCE_ID = "ÆØÅ"; // effektueringEjerReferenceID
+        public const string EFFEKTUERINGS_MODTAGER_FULDT_NAVN = "ÆØÅ"; // effektueringsmodtagerFuldtNavn
+        public const string EFFEKTUERINGS_MODTAGER_VIRKNING_FRA = "ÆØÅ"; // effektueringsmodtagerVirkningfra
+        public const string EFFEKTUERINGS_MODTAGER_AKTOER_REF = "ÆØÅ"; // effektueringsmodtagerAktoerRef
+        public const string EFFEKTUERINGS_MODTAGER_ROLLE_UUID = "ÆØÅ"; // effektueringModtagerRolleUuid
+        public const string EFFEKTUERINGS_MODTAGER_TYPE_UUID = "ÆØÅ"; // effektueringModtagerTypeUuid
+        public const string EFFEKTUERINGS_MODTAGER_REFERENCE_ID = "ÆØÅ"; // effektueringsmodtagerReferenceId
+        public const string YDELSE_LIVSCYKLUS_KODE = "ÆØÅ"; // ydelseLivscyklusKode
+        public const string YDELSE_AKTOER_REF = "ÆØÅ"; // ydelseAktoerRef
+        public const string YDELSE_ROLLE_UUID = "6ebd938f-0bbf-4142-a65c-fefe15e9f192"; // ydelseRolleUuid
+        public const string YDELSE_TYPE_UUID = "3aa45cbd-94c3-4601-84a6-66ce0f157dda"; // ydelseTypeUuid
+        public const string YDELSE_REFERENCE_ID = "2637c22e-06b8-4f8c-9520-42e4de177203"; // ydelseReferenceId
 
         #endregion
     }
