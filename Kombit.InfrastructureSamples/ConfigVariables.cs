@@ -157,7 +157,7 @@ namespace Kombit.InfrastructureSamples {
         public const string BEVILGET_YDELSE_ID = "1"; // bevilgetYdelseID
         public const string BEVILGET_YDELSE_NAVN = "Folkepension"; // bevilgetYdelseNavn
         public const string BEVILGET_YDELSE_STARTDATO = "2024-01-01T14:54:23.234+01.00"; // bevilgetYdelseStardato
-        public const string BEVILGET_YDELSE_SLUTDATO = "ÆØÅ" // bevilgetYdelseSlutdato
+        public const string BEVILGET_YDELSE_SLUTDATO = "ÆØÅ"; // bevilgetYdelseSlutdato
         public const string YDELSE_YDELSES_NAVN = "Grundbeløb - FOP"; // ydelseYdelsesnavn
         public const string BEVILLING_PRIMAER_KLASSE_BRUGERVENDT_NOEGLE = "32.03.04"; // bevillingPrimaerKlasseBrugervendtNoegle
         public const string BEVILLING_PRIMAER_KLASSE_KlASSETITEL = "Folkepension"; // bevillingPrimaerKlasseKlassetitel
@@ -171,6 +171,7 @@ namespace Kombit.InfrastructureSamples {
         public const string BEVILLING_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingAktoerRef
         public const string BEVILLINGS_SAG_ROLLE_UUID = "31237487-787a-424f-8819-56aaedf00643"; // bevillingssagRolleUuid
         public const string BEVILLINGS_SAG_TYPE_UUID = "f08a4a13-2567-41d0-bf8d-3af754b03464"; // bevillingssagTypeUuid
+        public const string BEVILLINGS_SAG_REFERENCE_ID = "1111aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingssagReferenceID
         public const string BEVILLINGS_PART_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingspartBrugervendtNoegle
         public const string YDELSESMODTAGER_FULDT_NAVN = "Lonnie Pedersen"; // ydelsesmodtagerFuldtNavn
         public const string BEVILLINGS_PART_STARTDATO = "ÆØÅ"; // bevillingspartStartdato
@@ -234,7 +235,23 @@ namespace Kombit.InfrastructureSamples {
         public const string YDELSE_ROLLE_UUID = "6ebd938f-0bbf-4142-a65c-fefe15e9f192"; // ydelseRolleUuid
         public const string YDELSE_TYPE_UUID = "3aa45cbd-94c3-4601-84a6-66ce0f157dda"; // ydelseTypeUuid
         public const string YDELSE_REFERENCE_ID = "2637c22e-06b8-4f8c-9520-42e4de177203"; // ydelseReferenceId
-
+        public const string EFFEKTUERINGS_PLAN_ID = "1"; // effektueringsplanID
+        public const string EFFEKTUERINGS_PLAN_STARTDATO = "2024-01-01T14:54:23.234+01.00"; // effektueringsplanStardato
+        public const string EFFEKTUERINGS_PLAN_SLUTDATO = "2024-01-31T14:54:23.234+01.00"; // effektueringsplanSlutdato
+        public const string EFFEKTUERINGS_PLAN_BEREGNINGSFREKVENS = "7772f4e3-b06d-4ef8-b599-9134cf3fdee4"; // effektueringsplanBeregningsfrekvens
+        public const string EFFEKTUERINGS_PLAN_FORUD_BAGUD = "Bagud"; // effektueringsplanForudBagud
+        public const string EFFEKTUERINGS_PLAN_DISPOSITIONSDAG = "Sidste bankdag i måneden"; // effektueringsplanDispositionsdag
+        public const string EFFEKTUERINGS_PLAN_YDELSESBELOEB = "6694"; // effektueringsplanYdelsesbeloeb
+        public const string BEVILLINGS_SAG_VIRKNING_FRA = "ÆØÅ"; // bevillingssagVirkningFra
+        public const string BEVILLINGS_SAG_AKTOER_REF = "ÆØÅ"; // bevillingssagAktoerRef
+        public const string YDELSESMODTAGER_VIRKNING_FRA = "ÆØÅ"; // ydelsesmodtagerVirkningFra
+        public const string YDELSESMODTAGER_AKTOER_REF = "ÆØÅ"; // ydelsesmodtagerAktoerRef
+        public const string BEVILLING_EJER_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingEjerBrugervendtNoegle
+        public const string BEVILLING_EJER_VIRKNING_FRA = "ÆØÅ"; // bevillingEjerVirkningFra
+        public const string BEVILLING_EJER_AKTOER_REF = "ÆØÅ"; // bevillingEjerAktoerRef
+        public const string BEVILLING_ANSVARLIG_VIRKNING_FRA = "ÆØÅ"; // bevillingAnsvarligVirkningFra
+        public const string BEVILLING_ANSVARLIG_AKTOER_REF = "ÆØÅ"; // bevillingAnsvarligAktoerRef
+        public const string YDELSE_INDEKS = "1"; // ydelseIndeks
         #endregion
     }
 }
