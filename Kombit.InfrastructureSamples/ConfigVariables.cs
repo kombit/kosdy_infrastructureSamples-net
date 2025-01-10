@@ -161,7 +161,7 @@ namespace Kombit.InfrastructureSamples {
         public const string YDELSE_YDELSES_NAVN = "Grundbeløb - FOP"; // ydelseYdelsesnavn
         public const string BEVILLING_PRIMAER_KLASSE_BRUGERVENDT_NOEGLE = "32.03.04"; // bevillingPrimaerKlasseBrugervendtNoegle
         public const string BEVILLING_PRIMAER_KLASSE_KlASSETITEL = "Folkepension"; // bevillingPrimaerKlasseKlassetitel
-        public const string BEVILLING_PRIMAER_KLASSE_ROlLE_UUID = "ea909030-c5fa-4544-9b22-a0010d08ebe1"; // bevillingPrimaerKlasseRolleUuid
+        public const string BEVILLING_PRIMAER_KLASSE_ROLLE_UUID = "ea909030-c5fa-4544-9b22-a0010d08ebe1"; // bevillingPrimaerKlasseRolleUuid
         public const string BEVILLING_KLASSE_TYPE_UUID = "7c51b9a8-d388-4e83-8c8b-ee3a90458d0b"; // bevillingKlasseTypeUuid
         public const string BEVILLING_PRIMAER_KLASSE_INDEKS = "1"; // bevillingPrimaerKlasseIndeks
         public const string BEVILLING_PRIMAER_KLASSE_REFERENCE_ID = "70355b26-6028-4e42-9eb1-1a93aa9890b1"; // bevillingPrimaerKlasseReferenceId
@@ -172,9 +172,18 @@ namespace Kombit.InfrastructureSamples {
         public const string BEVILLINGS_SAG_ROLLE_UUID = "31237487-787a-424f-8819-56aaedf00643"; // bevillingssagRolleUuid
         public const string BEVILLINGS_SAG_TYPE_UUID = "f08a4a13-2567-41d0-bf8d-3af754b03464"; // bevillingssagTypeUuid
         public const string BEVILLINGS_SAG_REFERENCE_ID = "1111aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingssagReferenceID
+        public const string BEVILLINGS_SAG_AKTOER_TYPE_KODE = "ÆØÅ"; // bevillingssagAktoerTypeKode
         public const string BEVILLINGS_PART_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingspartBrugervendtNoegle
         public const string YDELSESMODTAGER_FULDT_NAVN = "Lonnie Pedersen"; // ydelsesmodtagerFuldtNavn
         public const string BEVILLINGS_PART_STARTDATO = "ÆØÅ"; // bevillingspartStartdato
+        public const string BEVILLINGS_PART_AKTOER_TYPE_KODE = "ÆØÅ"; // bevillingspartAktoerTypeKode
+        public const string BEVILLING_EJER_AKTOER_TYPE_KODE = "ÆØÅ"; // bevillingEjerAktoerTypeKode
+        public const string BEVILLING_ANSVARLIG_AKTOER_TYPE_KODE = "ÆØÅ"; // bevillingAnsvarligAktoerTypeKode
+        public const string EFFEKTUERING_EGENSKABER_AKTOER_TYPE_KODE = "ÆØÅ"; // effektueringEgenskaberAktoerTypeKodeType
+        public const string YDELSEEFFEKTUERING_AKTOER_TYPE_KODE = "ÆØÅ"; // ydelseseffektueringAktoerTypeKode
+        public const string EFFEKTUERING_EJER_AKTOER_TYPE_KODE = "ÆØÅ"; // effektueringEjerAktoerTypeKode
+        public const string EFFEKTUERINGS_MODTAGER_AKTOER_TYPE_KODE = "ÆØÅ"; // effektueringsmodtagerAktoerTypeKode
+        public const string YDELSESMODTAGER_AKTOER_TYPE_KODE = "ÆØÅ"; // ydelsesmodtagerAktoerTypeKode
         public const string BEVILLING_YDELSESMODTAGER_ROLLE_UUID = "93af57a7-7658-4fac-98da-9e5ac7a7d9a5"; // bevillingYdelsesmodtagerRolleUuid
         public const string BEVILLING_YDELSESMODTAGER_TYPE_UUID = "c59f1523-1786-48c7-baff-466de1db3320"; // bevillingYdelsesmodtagerTypeUuid
         public const string YDELSESMODTAGER_INDEKS = "1"; // ydelsesmodtagerIndeks
