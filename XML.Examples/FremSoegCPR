@@ -1,0 +1,54 @@
+ <FremsoegSagDokumentIndeksInput xmlns="urn:oio:sts:sagdok:sagdokumentindeks:6" xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance>
+          <SoegUdtryk>
+            <urn:operation>OR</urn:operation>
+            <SoegSag>
+               <AttributListe xmlns="urn:oio:sts:sagdok:sag:6"/>
+               <TilstandListe xmlns="urn:oio:sts:sagdok:sag:6"/>
+               <RelationListe xmlns="urn:oio:sts:sagdok:sag:6">
+                  <Sagspart>
+                     <ReferenceID xmlns="urn:oio:sts:generelledefinitioner:6">
+                        <URNIdentifikator xmlns="urn:oio:sagdok:3.0.0">urn:oio:cpr-nr:1234567893</URNIdentifikator>
+                     </ReferenceID>
+                  </Sagspart>
+               </RelationListe>
+            </SoegSag>
+            <SoegSag>
+               <AttributListe xmlns="urn:oio:sts:sagdok:sag:6"/>
+               <TilstandListe xmlns="urn:oio:sts:sagdok:sag:6"/>
+               <RelationListe xmlns="urn:oio:sts:sagdok:sag:6">
+                  <Sagspart>
+                     <ReferenceID xmlns="urn:oio:sts:generelledefinitioner:6">
+                        <URNIdentifikator xmlns="urn:oio:sagdok:3.0.0">urn:oio:cpr-nr:xxxx</URNIdentifikator>
+                     </ReferenceID>
+                  </Sagspart>
+               </RelationListe>
+            </SoegSag>
+         </SoegUdtryk>
+         <Filter>
+            <SagVis>
+               <Vis>egenskaber</Vis>
+            </SagVis>
+            <SagVis>
+               <Vis>fremdrift</Vis>
+            </SagVis>
+            <SagVis>
+               <Vis>itsystem</Vis>
+            </SagVis>
+            <SagVis>
+               <Vis>sagsaktoer</Vis>
+            </SagVis>
+            <SagVis>
+               <Vis>sagsklasse</Vis>
+            </SagVis>
+            <SagVis>
+               <Vis>sagspart</Vis>
+            </SagVis>
+         </Filter>
+         <Sortering>
+            <SagSortering>
+               <Element>Foelsomhed</Element>
+               <Retning>Stigende</Retning>
+               <Prioritet>1</Prioritet>
+            </SagSortering>
+         </Sortering>
+      </FremsoegSagDokumentIndeksInput>
