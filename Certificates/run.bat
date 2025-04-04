@@ -7,12 +7,15 @@ certutil -addstore -user -f My "Secure Token Service\externtest-adgangsstyring-t
 echo =================================================
 
 echo Installing certificates for SagDokIndeks
-certutil -addstore -user -f My "SagDokIndeks\SDI_EXTTEST_Sags-og-Dokindeks_1.crt"
+certutil -addstore -user -f My "SagDokIndeks\SDI_EXTTEST_Sags-og-Dokindeks_1.cer"
 
 echo Installing certificates for Organisation
-certutil -addstore -user -f My "Organisation\ORG_EXTTEST_Organisation_1.crt"
+certutil -addstore -user -f My "Organisation\ORG_EXTTEST_Organisation_1.cer"
 
 echo Installing certificates for Klassifikation
-certutil -addstore -user -f My "Klassifikation\KLA_EXTTEST_Klassifikation_1.crt"
+certutil -addstore -user -f My "Klassifikation\KLA_EXTTEST_Klassifikation_1.cer"
+
+echo Installing certificates for YdelsesIndeks
+certutil -addstore -user -f My "YdelseIndeks\YDI_EXTTEST_Ydelsesindeks_1.cer"
 
 :exit

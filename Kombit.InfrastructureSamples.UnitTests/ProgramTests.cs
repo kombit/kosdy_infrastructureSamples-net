@@ -3,6 +3,7 @@ using importerResponse = Kombit.InfrastructureSamples.SagDokumentIndeksService.i
 using Kombit.InfrastructureSamples.KlasseService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace Kombit.InfrastructureSamples.UnitTests
 {
@@ -78,18 +79,34 @@ namespace Kombit.InfrastructureSamples.UnitTests
         }
 
         /// <summary>
-        /// Test method for SagdokumentIndeks
+        /// Test method for YdelsesIndeks
         /// The test ensures that scenarios 1-4 returns Statuskode 20 which equals OK. 
         /// </summary>
         [TestMethod]
-        public void FremsoegYdelse_ShouldPassWithCode20()
+        public void ImporterYdelse_ShouldPassWithCode20()
         {
             //Arrange
             var ydelseIndeks = new YdelsesIndeks.YdelseIndeks();
             //Act 
-            Kombit.InfrastructureSamples.YdelseIndeksService.fremsoegResponse fremsoegResponse = ydelseIndeks.fremsoegSimple("ÆØÅ", "ÆØÅ");
+            YdelseIndeksService.importerResponse importerResponse = ydelseIndeks.importer();
             //Assert
-            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(importerResponse.ImporterYdelseIndeksOutput.Items.Length, 2);
+            foreach(YdelseIndeksService.StandardReturType standardReturType in importerResponse.ImporterYdelseIndeksOutput.Items)
+            {
+                Assert.AreEqual(standardReturType.StatusKode, "20");
+                Assert.AreEqual(standardReturType.FejlbeskedTekst, "OK");
+                Assert.AreEqual(standardReturType.DetaljeretFejlbesked, null);
+            }
+
+            //Arrange
+            var bevillingIndeks = new BevillingIndeks.BevillingIndeks();
+            //Act
+            BevillingIndeksService.fjernResponse fjernResponse = bevillingIndeks.fjern();
+            //Assert
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.FejlbeskedTekst, "OK");
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.DetaljeretFejlbesked, null);
+
         }
     }
 }

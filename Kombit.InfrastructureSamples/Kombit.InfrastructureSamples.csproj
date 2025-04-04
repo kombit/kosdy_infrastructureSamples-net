@@ -65,9 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BevillingIndeks\BevillingIndeks.cs" />
+    <Compile Include="BevillingIndeks\BevillingIndeksService.cs" />
     <Compile Include="ConfigVariables.cs" />
     <Compile Include="Klassifikation\Klasse.cs" />
     <Compile Include="Klassifikation\KlasseService.cs" />
+    <Compile Include="OekonomiskEffektueringIndeks\OekonomiskEffektueringIndeksService.cs" />
     <Compile Include="Organisation\Organisation.cs" />
     <Compile Include="Organisation\OrganisationService.cs" />
     <Compile Include="Organisation\Virksomhed.cs" />
@@ -87,6 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="BevillingIndeks\output.config" />
+    <None Include="OekonomiskEffektueringIndeks\output.config" />
     <None Include="YdelsesIndeks\output.config" />
   </ItemGroup>
   <ItemGroup>
