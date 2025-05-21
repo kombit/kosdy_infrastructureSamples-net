@@ -70,6 +70,7 @@
     <Compile Include="ConfigVariables.cs" />
     <Compile Include="Klassifikation\Klasse.cs" />
     <Compile Include="Klassifikation\KlasseService.cs" />
+    <Compile Include="OekonomiskEffektueringIndeks\OekonomiskEffektueringIndeks.cs" />
     <Compile Include="OekonomiskEffektueringIndeks\OekonomiskEffektueringIndeksService.cs" />
     <Compile Include="Organisation\Organisation.cs" />
     <Compile Include="Organisation\OrganisationService.cs" />
