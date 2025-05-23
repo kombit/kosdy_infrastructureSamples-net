@@ -8,7 +8,6 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.IdentityModel.Tokens;
-using Kombit.InfrastructureSamples.UnitTests;
 
 namespace Kombit.InfrastructureSamples.YdelsesIndeks
 {
