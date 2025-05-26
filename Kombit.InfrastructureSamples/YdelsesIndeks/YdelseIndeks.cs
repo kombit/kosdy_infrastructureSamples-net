@@ -2883,7 +2883,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             }
                                         }
                                         },
-                                        operationSpecified = false,
+                                        operation = AndOrType.OR,
+                                        operationSpecified = true,
                                         ItemsElementName = new[] {
                                             ItemsChoiceType.SoegOekonomiskEffektueringIndeks
                                         },
